@@ -1,0 +1,21 @@
+{
+  "slug": "intitule-role",
+  "titre": "Qualifier un intitulé LinkedIn : fondateur, directeur, salarié, indépendant",
+  "description": "Avant de payer un enrichissement ou d'envoyer un lead à un agent, Jev lit le titre LinkedIn (headline) et dit à quelle famille de rôle il appartient. C'est la question passée sur 5 079 intitulés le 21/09/2026 : 80,1 % d'accord avec gpt-4o-mini, 0,17 $, et Jev avait raison 4 fois sur 5 sur les désaccords tranchables.",
+  "etape_gtm": "ciblage",
+  "colonnes": ["linkedin_headline"],
+  "seuil_confiance": 0.9,
+  "questions": {
+    "role": {
+      "type": "choice",
+      "instructions": "Classify this LinkedIn headline to qualify a B2B lead. When several roles are separated by '|', '/', '·', '•', ',', 'and', 'et', '+' or line breaks, the FIRST role is the main one; decide on it. A CEO or President without other indication counts as fondateur (benefit of the doubt).",
+      "criteria": {
+        "fondateur": "Founded the company or runs it as its owner or top executive: Founder, Co-Founder, Fondateur, CEO, PDG, Président, Dirigeant, Owner, Entrepreneur, Gérant, Co-Gérant of an independent SME. Not a solo coaching or consulting activity.",
+        "directeur": "Senior executive who is not the CEO, employed by a company: COO, CFO, CTO, CMO, any Chief X Officer, VP, Director, Directeur (général, commercial, opérations, d'agence), Head of X, Managing Director, Managing Partner, Partner or Associé in a firm, salaried DG of a large structure or subsidiary. A non-CEO C-level at an identifiable company stays directeur even if a 'Founder @ side project' follows.",
+        "salarie": "Non-executive employee of a company: Manager, Product or Project Manager, Lead, Chef de projet, Responsable, Analyst, Developer, Engineer, internal Consultant, SDR, Sales Rep, Designer, Account Manager, Coordinator, Specialist, Conseiller. A title 'chez X' or '@ X' that is not a founder or director title.",
+        "independant": "Sells their own services solo: freelance, independent consultant, auto-entrepreneur, solopreneur, solo coach or trainer, PhD or researcher, 'Founder' of a personal coaching, training or consulting micro-activity, or a headline written as a marketing promise ('J'aide les X à...', 'Expert en Y pour Z', 'Je booste...').",
+        "unclear": "Impossible to decide: empty headline, initials only ('KP', 'XXX'), a follower count, or a bare list of skills without any role."
+      }
+    }
+  }
+}

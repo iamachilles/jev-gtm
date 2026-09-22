@@ -1,0 +1,21 @@
+{
+  "slug": "score-signal",
+  "titre": "Noter un signal d'intention de 0 à 3",
+  "description": "Une offre d'emploi, un post ou une annonce de levée passe devant Jev avec la grille du signal recherché. Jev rend une note de 0 à 3 et sa confiance ; seuls les 3 partent en priorité, les 0 sont écartés sans lecture. La grille est à réécrire pour votre propre offre : celle-ci cherche des PME qui structurent leur prospection.",
+  "etape_gtm": "signaux",
+  "colonnes": ["type_signal", "entreprise", "texte"],
+  "seuil_confiance": 0.7,
+  "max_chars_par_colonne": 4000,
+  "questions": {
+    "score": {
+      "type": "score",
+      "instructions": "Rate how strongly this signal (`type_signal` from `entreprise`, text in `texte`) indicates that the company is about to invest in outbound sales, lead generation or sales automation in the next three months.",
+      "criteria": [
+        "0, no signal: the text is unrelated to sales, growth or customer acquisition.",
+        "1, weak: generic growth talk, a hire far from sales (finance, ops), or a signal older than six months.",
+        "2, medium: a first sales or marketing hire, a fundraise mentioning commercial expansion, a post about wanting more clients without a concrete step.",
+        "3, strong: hiring an SDR, BDR, Head of Sales or growth lead, a stated outbound or lead generation project, a tool change (CRM, sequencer) or an explicit call for a prospecting provider."
+      ]
+    }
+  }
+}

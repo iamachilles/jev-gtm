@@ -1,0 +1,11 @@
+id,auteur_headline,commentaire,parle_projet,parle_projet_p_oui,parle_projet_confidence,est_decideur,est_decideur_p_oui,est_decideur_confidence,demande_ressource,demande_ressource_p_oui,demande_ressource_confidence,a_verifier
+1,CEO @ Nuvola,"JEV ! On est justement en train de reclasser 3 000 contacts dans HubSpot, curieux de voir ce que ça donne.",oui,0.96,0.92,oui,0.97,0.94,oui,0.89,0.78,0
+2,Étudiant en école de commerce,Super post 🔥,non,0.02,0.96,non,0.01,0.98,non,0.02,0.96,0
+3,Consultant outbound indépendant,JEV,non,0.09,0.82,non,0.03,0.94,oui,0.86,0.72,0
+4,"Directrice marketing, Groupe Aléa","On a testé un classifieur maison sur nos réponses de campagne, 70 % de bonnes réponses, on cherche mieux. Intéressée.",oui,0.97,0.94,oui,0.95,0.9,oui,0.61,0.22,1
+5,,Merci pour le partage,non,0.02,0.96,non,0.05,0.9,non,0.02,0.96,0
+6,Head of Sales @ Vertigo Robotics,Je veux bien le guide. On a un problème de dédoublonnage entre notre CRM et Sales Nav depuis des mois.,oui,0.97,0.94,oui,0.93,0.86,oui,0.96,0.92,0
+7,Product Manager,@Julie regarde ça,non,0.06,0.88,non,0.1,0.8,non,0.07,0.86,0
+8,"Fondateur, Corvus Avocats","Pas convaincu, un modèle qui ne sait pas écrire ne peut pas comprendre un intitulé juridique.",non,0.06,0.88,oui,0.97,0.94,non,0.02,0.96,0
+9,Freelance growth,"JEV s'il te plaît, j'ai 12 000 commentaires à profiler pour un client.",oui,0.8,0.6,non,0.04,0.92,oui,0.97,0.94,0
+10,"Gérant, Menuiserie Bertrand & Fils","On vient de recruter un commercial, on n'a pas de CRM, par où on commence ?",oui,0.94,0.88,oui,0.82,0.64,non,0.06,0.88,0

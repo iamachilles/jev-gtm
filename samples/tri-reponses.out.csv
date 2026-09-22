@@ -1,0 +1,11 @@
+id,message_envoye,reponse,categorie,categorie_confidence,categorie_p_autre,categorie_p_desinscription,categorie_p_a_transferer,categorie_p_interesse,categorie_p_hors_cible,categorie_p_pas_maintenant,a_verifier
+1,"Bonjour Claire, je vous écris parce que Nuvola recrute un SDR : on aide les PME à monter leur machine outbound en 6 semaines. Un échange de 20 min cette semaine ?","Oui pourquoi pas, jeudi 15h ça vous va ?",interesse,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0
+2,(même message),"Merci mais on est déjà équipés sur ce sujet avec une agence jusqu'à fin d'année, revenez vers moi en janvier.",pas_maintenant,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0
+3,(même message),"Je ne suis plus en charge de ce sujet, il faut voir avec Thomas Delmas, notre directeur commercial.",a_transferer,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0
+4,(même message),Merci de me retirer de votre liste.,desinscription,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0
+5,(même message),"Je suis absent jusqu'au 30 septembre, je reviendrai vers vous à mon retour.",autre,0.92,0.93,0.0,0.0,0.0,0.0,0.07,0
+6,(même message),"Nous sommes une association, ça ne correspond pas du tout.",hors_cible,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0
+7,(même message),"Ça m'intéresse, vous pouvez m'envoyer une proposition avec les tarifs ?",interesse,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0
+8,(même message),?,autre,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0
+9,(même message),"Pas le bon moment, on refait le point après notre levée, sans doute au printemps.",pas_maintenant,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0
+10,(même message),"On a 3 personnes, on n'a pas besoin de SDR, merci.",hors_cible,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0

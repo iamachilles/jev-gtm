@@ -1,0 +1,23 @@
+{
+  "slug": "tri-reponses",
+  "titre": "Trier les réponses d'une campagne",
+  "description": "Chaque réponse à une séquence email ou LinkedIn est rangée dans une case : intéressé, pas maintenant, hors cible, à transférer, désinscription, autre. Les réponses sûres partent dans le bon pipeline sans lecture ; celles sous le seuil de confiance vont à un humain.",
+  "etape_gtm": "reponses",
+  "colonnes": ["message_envoye", "reponse"],
+  "seuil_confiance": 0.8,
+  "max_chars_par_colonne": 2000,
+  "questions": {
+    "categorie": {
+      "type": "choice",
+      "instructions": "The `message_envoye` is a cold outreach message we sent to a prospect; `reponse` is the prospect's reply. Which category best describes the reply?",
+      "criteria": {
+        "interesse": "The prospect wants to continue: asks for a call, a demo, a proposal, more details, or says yes.",
+        "pas_maintenant": "The prospect is open but defers: 'not now', 'come back in Q1', 'after the summer', 'we already have a provider until next year'.",
+        "hors_cible": "The prospect says the offer does not apply to them: wrong role, wrong company size, no need, already solved, or a clear no without a later date.",
+        "a_transferer": "The prospect points to another person or team who handles this, with or without a name or an email address.",
+        "desinscription": "The prospect asks to stop receiving messages, to be removed, or complains about being contacted.",
+        "autre": "Out of office, automatic reply, question unrelated to the offer, or a reply too short or ambiguous to classify."
+      }
+    }
+  }
+}

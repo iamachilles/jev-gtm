@@ -1,0 +1,11 @@
+id,linkedin_headline,role,role_confidence,role_p_salarie,role_p_fondateur,role_p_independant,role_p_unclear,role_p_directeur,a_verifier
+1,CEO & Co-Founder @ Nuvola | On aide les PME industrielles à vendre à l'export,fondateur,1.0,0.0,1.0,0.0,0.0,0.0,0
+2,Directrice Commerciale chez Groupe Aléa,directeur,1.0,0.0,0.0,0.0,0.0,1.0,0
+3,J'aide les dirigeants de PME à doubler leur pipeline en 90 jours | Consultant outbound,independant,1.0,0.0,0.0,1.0,0.0,0.0,0
+4,Chef de projet marketing digital chez Lumen Énergie,salarie,1.0,1.0,0.0,0.0,0.0,0.0,0
+5,Head of Sales | Fintech B2B | ex-Qonto,directeur,0.99,0.01,0.0,0.0,0.0,0.99,0
+6,"Gérant, Menuiserie Bertrand & Fils",fondateur,1.0,0.0,1.0,0.0,0.0,0.0,0
+7,"Freelance UX designer, disponible pour missions",independant,1.0,0.0,0.0,1.0,0.0,0.0,0
+8,KP,unclear,1.0,0.0,0.0,0.0,1.0,0.0,0
+9,Managing Partner at Corvus Avocats,directeur,0.99,0.0,0.0,0.0,0.0,1.0,0
+10,SDR @ Payfit 🚀 | On recrute !,salarie,1.0,1.0,0.0,0.0,0.0,0.0,0

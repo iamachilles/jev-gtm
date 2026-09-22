@@ -1,0 +1,11 @@
+id,job_title,department,still_at_company
+1,"Director, Government Affairs",Public Policy,true
+2,Senior Accountant,Finance,true
+3,Site Acquisition Specialist,Network Deployment,true
+4,Software Engineer II,Engineering,true
+5,VP Market Expansion,Strategy,true
+6,Regional Operations Manager,Operations,true
+7,"Lead Data Developer, Competitive Intelligence",Strategy,true
+8,Customer Service Representative,Support,true
+9,Director of Franchise Relations,Government Affairs,false
+10,Permitting Coordinator,Network Deployment,true

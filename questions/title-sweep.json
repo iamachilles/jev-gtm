@@ -1,0 +1,25 @@
+{
+  "slug": "title-sweep",
+  "titre": "Title Sweep : noter tous les intitulés d'un compte cible de 1 à 5",
+  "description": "La méthode de Jordan Crawford (Blueprint GTM) : au lieu de chercher des titres par mot-clé, on fait noter par Jev la totalité des intitulés d'un compte cible avec les règles d'achat de votre offre. 5 tient le problème, 4 exécute, 3 est le service voisin, 2 le reste, 1 le service à exclure. Sur un compte de 79 601 personnes, Jordan l'a fait tourner pour 9,47 $. Les règles d'achat ci-dessous sont un exemple (un outil de veille sur les décisions des collectivités) : réécrivez-les à partir de vos propres appels commerciaux.",
+  "etape_gtm": "ciblage",
+  "colonnes": ["job_title", "department", "still_at_company"],
+  "seuil_confiance": 0.6,
+  "questions": {
+    "niveau": {
+      "type": "score",
+      "_base": 1,
+      "instructions": {
+        "buying_rules": "We sell a monitoring tool that tracks what city councils and planning departments are about to decide. Buyers are the people who own government affairs, site acquisition, network deployment, market expansion and competitive intelligence. People who execute what those buyers decide are useful contacts. Finance and legal are explicitly excluded.",
+        "question": "Given `buying_rules`, rate this person by `job_title` (and `department` when present) on their role in the buying process. `still_at_company` was set by code and is reliable."
+      },
+      "criteria": [
+        "1, excluded: finance, accounting, legal, tax, payroll, or a person no longer at the company.",
+        "2, unrelated: any other role with no link to the pain (engineering unrelated to deployment, HR, IT support, customer service).",
+        "3, adjacent: a neighbouring department that hears about the pain (regional operations, real estate, public relations, strategy).",
+        "4, executes: does the work the buyers decide (network deployment lead, site acquisition specialist, permitting, market analyst, GIS or data lead in those teams).",
+        "5, owns the pain: government affairs, public policy, franchise, market expansion, competitive intelligence, site acquisition leadership, at director level or above, or the named owner of those topics."
+      ]
+    }
+  }
+}

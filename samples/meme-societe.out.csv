@@ -1,0 +1,11 @@
+id,sirene_denomination,sirene_activite,sirene_commune,sirene_effectif,linkedin_company_name,linkedin_industry,linkedin_location,linkedin_headcount,linkedin_description,meme_societe,meme_societe_p_oui,meme_societe_confidence,a_verifier
+1,NUVOLA SAS,Conseil en systèmes et logiciels informatiques,LYON,20 à 49 salariés,Nuvola,Software Development,"Lyon, France",11-50,Nuvola aide les PME industrielles à vendre à l'export grâce à sa plateforme.,oui,0.78,0.56,1
+2,BOULANGERIE MARTIN,Boulangerie et boulangerie-pâtisserie,LILLE,3 à 5 salariés,Martin Technologies,IT Services,"Paris, France",51-200,ESN spécialisée dans le cloud.,non,0.01,0.98,0
+3,ALEA GROUPE,Activités des sièges sociaux,PARIS,250 à 499 salariés,Groupe Aléa,Insurance,"Paris, France",201-500,Courtier en assurance pour les entreprises depuis 1987.,oui,0.88,0.76,0
+4,LUMEN ENERGIE,Production d'électricité,TOULOUSE,50 à 99 salariés,Lumen,Renewable Energy,"Toulouse, France",51-200,Producteur d'énergie solaire pour les industriels.,oui,0.87,0.74,0
+5,LUMEN ENERGIE,Production d'électricité,TOULOUSE,50 à 99 salariés,Lumen Studio,Design,"Montréal, Canada",2-10,Studio de design graphique.,non,0.02,0.96,0
+6,CORVUS AVOCATS,Activités juridiques,BORDEAUX,10 à 19 salariés,Corvus,Law Practice,Bordeaux,11-50,Cabinet d'avocats d'affaires.,oui,0.93,0.86,0
+7,VERTIGO ROBOTICS,Fabrication de machines,NANTES,20 à 49 salariés,Vertigo Robotics,Industrial Automation,"Nantes, France",11-50,Robots de tri pour la logistique.,oui,0.94,0.88,0
+8,BELLUNE,Fabrication d'étoffes,ROUBAIX,100 à 199 salariés,Bellune Textile,Textile Manufacturing,"Roubaix, France",51-200,"Tissage et ennoblissement, fondée en 1921.",oui,0.94,0.88,0
+9,ATELIER MAUD,Fabrication d'articles de joaillerie,ANNECY,1 ou 2 salariés,Maud Consulting,Management Consulting,Genève,2-10,Conseil en organisation.,non,0.06,0.88,0
+10,PAYFIT,Édition de logiciels applicatifs,PARIS,500 à 999 salariés,PayFit,Software Development,"Paris, France",501-1000,La solution de paie et RH des PME.,oui,0.98,0.96,0

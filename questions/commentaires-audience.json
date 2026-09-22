@@ -1,0 +1,40 @@
+{
+  "slug": "commentaires-audience",
+  "titre": "Transformer des commentaires LinkedIn en colonnes",
+  "description": "Pour profiler l'audience d'un post (le vôtre ou celui d'un tiers), Jev lit chaque commentaire avec le titre de son auteur et répond à trois questions fermées d'un coup : la personne parle d'un projet, elle est décideuse, elle demande la ressource (le mot-clé du post est donné dans la question, à remplacer par le vôtre). Trois colonnes oui / non avec leur probabilité, prêtes pour un tableau croisé.",
+  "etape_gtm": "audience",
+  "colonnes": [
+    "auteur_headline",
+    "commentaire"
+  ],
+  "seuil_confiance": 0.6,
+  "questions": {
+    "parle_projet": {
+      "type": "noul",
+      "instructions": "Does the comment mention a concrete project, test or need on the author's side (something they are doing, planning or struggling with), as opposed to a generic reaction?",
+      "criteria": {
+        "true": "The author describes their own situation, project, test, tool or problem.",
+        "false": "Generic praise, emoji, tag of someone else, a question with no context, or a request for the resource only."
+      }
+    },
+    "est_decideur": {
+      "type": "noul",
+      "instructions": "Based on `auteur_headline`, is the author a decision maker (founder, CEO, executive, director, head of a team) rather than an employee, a student or a freelancer?",
+      "criteria": {
+        "true": "Founder, co-founder, CEO, owner, C-level, VP, director, head of a department, managing partner.",
+        "false": "Employee, manager without a department, student, freelancer, consultant, coach, empty or unclear headline."
+      }
+    },
+    "demande_ressource": {
+      "type": "noul",
+      "instructions": {
+        "keyword": "JEV",
+        "question": "Does the comment ask for the resource offered in the post? Posting the `keyword` alone counts as asking, as does 'send it to me', 'interested', 'I want it', or asking for the guide, template or link."
+      },
+      "criteria": {
+        "true": "The comment contains the `keyword` (alone or in a sentence), or asks to receive the resource, guide, template or link.",
+        "false": "The comment does not ask for anything to be sent and does not contain the `keyword`."
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "slug": "prestataire-dirigeants",
+  "titre": "Écarter les prestataires qui vendent aux dirigeants",
+  "description": "Un commentateur, un abonné ou un lead entrant qui vend lui-même des services aux dirigeants (coach, consultant, agence, freelance en prospection) n'est pas un acheteur, c'est un concurrent ou un pair. Jev lit le titre et la présentation et répond oui ou non avant qu'un agent ou un humain ne passe du temps dessus.",
+  "etape_gtm": "qualification",
+  "colonnes": ["linkedin_headline", "about"],
+  "seuil_confiance": 0.6,
+  "questions": {
+    "vend_aux_dirigeants": {
+      "type": "noul",
+      "instructions": "Does this person sell services (consulting, coaching, training, agency work, freelancing, growth, lead generation, marketing, recruiting, fractional roles) to business owners, executives or companies, as their own offer?",
+      "criteria": {
+        "true": "The headline or about text is an offer of services aimed at business leaders or companies: 'I help CEOs...', 'J'accompagne les dirigeants...', agency, consultant, coach, freelance, fractional CMO, growth partner, lead generation, outbound agency, recruiting firm.",
+        "false": "The person holds an operating role inside a company (founder or executive of a product company, employee, manager), or their offer targets consumers, or the text gives no sign of selling services to businesses."
+      }
+    }
+  }
+}
