@@ -4,6 +4,8 @@ Jev est le modèle de décision de [TypeSafe AI](https://typesafe.ai) : il ne r�
 
 Ce dépôt contient **un lanceur** (`jev_csv.py`, Python sans dépendance) et **sept questions** couvrant la chaîne d'acquisition B2B : du titre LinkedIn à trier jusqu'aux réponses de campagne à router. Chaque question vient avec un CSV d'exemple de 10 lignes et le CSV de sortie tel que Jev l'a rendu le 22 septembre 2026.
 
+Le catalogue des cas d'usage recensés (55 familles, sources et chiffres) : [CAS-D-USAGE.md](CAS-D-USAGE.md).
+
 Le guide qui va avec : [forward-ai.fr/ressources/jev-gtm](https://www.forward-ai.fr/ressources/jev-gtm). Pour comprendre Jev lui-même : [forward-ai.fr/ressources/jev-typesafe](https://www.forward-ai.fr/ressources/jev-typesafe).
 
 ## Les sept questions
