@@ -15,7 +15,7 @@ from pathlib import Path
 
 RACINE = Path(__file__).resolve().parent
 TYPES = {"choice", "score", "noul"}
-TIRETS = re.compile("[–—]")
+TIRETS = re.compile("[\u2013\u2014]")
 ok = True
 
 
