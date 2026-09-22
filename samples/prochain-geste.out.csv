@@ -1,0 +1,11 @@
+id,compte,etape,situation,playbook,playbook_confidence,playbook_p_envoyer_ressource,playbook_p_proposer_creneau,playbook_p_relance_douce,playbook_p_invitation_linkedin,playbook_p_email_premier_contact,playbook_p_passer_a_un_humain,playbook_p_mettre_en_pause,a_verifier
+1,Nuvola,nouveau,"Directeur général identifié, email vérifié par l'outil, aucun message envoyé. Offre d'emploi SDR publiée le 18/09.",email_premier_contact,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0
+2,Bellune Textile,nouveau,"Responsable marketing identifiée, pas de connexion LinkedIn, aucun email trouvé.",invitation_linkedin,0.99,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0
+3,Vertigo Robotics,contacte,"Email 1 le 08/09, email 2 le 13/09, aucune ouverture, aucune réponse.",relance_douce,0.98,0.0,0.0,0.99,0.0,0.0,0.0,0.01,0
+4,Lumen Énergie,engage,"Réponse le 20/09 : « intéressant, quel est votre tarif pour 800 comptes ? »",proposer_creneau,0.78,0.0,0.82,0.0,0.0,0.0,0.18,0.0,1
+5,Groupe Aléa,engage,"A liké deux posts et ouvert l'email 4 fois cette semaine, sans répondre.",envoyer_ressource,0.99,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0
+6,Corvus Avocats,contacte,"Réponse le 19/09 : « revenez en janvier, on boucle l'exercice ».",mettre_en_pause,0.98,0.0,0.0,0.0,0.0,0.0,0.02,0.98,0
+7,Martin Technologies,engage,"Réponse le 21/09 : « on a déjà un prestataire et vos prix sont deux fois trop élevés, retirez-moi de vos listes ».",passer_a_un_humain,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0
+8,Atelier Maud,contacte,"Email 1 le 20/08, email 2 le 28/08, invitation LinkedIn le 05/09, email 3 le 12/09, aucune réaction.",mettre_en_pause,0.96,0.0,0.0,0.02,0.0,0.0,0.01,0.97,0
+9,Groupe Delorme Logistique,rdv_propose,"Rendez-vous du 17/09 annulé par le directeur des opérations, qui demande un autre créneau la semaine prochaine.",proposer_creneau,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0
+10,Maison Roussel,engage,"Réponse le 21/09 de l'assistante : le gérant est en congé jusqu'au 06/10, merci de le recontacter à son retour.",mettre_en_pause,0.89,0.0,0.0,0.0,0.0,0.0,0.09,0.91,0

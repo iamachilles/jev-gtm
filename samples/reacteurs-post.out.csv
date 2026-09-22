@@ -1,0 +1,11 @@
+id,linkedin_headline,profil,profil_confidence,profil_p_autre,profil_p_recruteur,profil_p_vendeur,profil_p_pair,profil_p_acheteur,a_verifier
+1,CEO & Co-Founder @ Nuvola | Logiciel de gestion export pour les PME industrielles,acheteur,0.99,0.01,0.0,0.0,0.0,0.99,0
+2,J'aide les dirigeants de PME à générer 15 rendez-vous par mois | Consultant outbound,pair,0.95,0.0,0.0,0.0,0.97,0.03,0
+3,Account Executive @ lemlist | On aide les équipes sales à booker plus de rendez-vous,vendeur,0.97,0.0,0.0,0.98,0.02,0.0,0
+4,Talent Acquisition Manager chez Hays | Je recrute vos futurs commerciaux,recruteur,0.99,0.0,1.0,0.0,0.0,0.0,0
+5,Étudiant en Master 2 Marketing digital à l'IAE de Lyon,autre,1.0,1.0,0.0,0.0,0.0,0.0,0
+6,Directrice commerciale | Groupe Aléa | Assurance des entreprises,acheteur,0.96,0.01,0.0,0.02,0.0,0.97,0
+7,"Growth Engineer freelance | Clay, Cargo, n8n | Je construis vos machines outbound",pair,0.99,0.0,0.0,0.0,0.99,0.01,0
+8,SDR @ Payfit 🚀 | On recrute !,vendeur,0.85,0.0,0.12,0.88,0.0,0.0,0
+9,"Gérant, Menuiserie Bertrand & Fils",acheteur,0.57,0.34,0.0,0.0,0.0,0.66,1
+10,Journaliste économique | Les Échos,autre,1.0,1.0,0.0,0.0,0.0,0.0,0

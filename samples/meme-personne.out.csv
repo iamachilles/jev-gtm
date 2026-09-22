@@ -1,0 +1,11 @@
+id,nom_a,email_a,entreprise_a,poste_a,ville_a,nom_b,email_b,entreprise_b,poste_b,ville_b,meme_personne,meme_personne_p_oui,meme_personne_confidence,a_verifier
+1,Claire Morel,claire.morel@nuvola.fr,Nuvola,CEO,Lyon,MOREL Claire,cmorel@gmail.com,Nuvola SAS,Présidente,Lyon,oui,0.95,0.9,0
+2,Nicolas Petit,nicolas.petit@vertigo-robotics.com,Vertigo Robotics,Head of Sales,Nantes,Nico Petit,nico.petit@outlook.fr,Vertigo Robotics,Directeur commercial,Nantes,oui,0.96,0.92,0
+3,Julie Martin,julie.martin@martin-technologies.fr,Martin Technologies,Chef de projet,Paris,Julie Martin,jmartin@bellune-textile.fr,Bellune Textile,Responsable qualité,Roubaix,non,0.33,0.34,1
+4,Thomas Delmas,t.delmas@groupe-alea.fr,Groupe Aléa,Directeur commercial,Paris,Thomas Delmas,thomas@lumen-energie.fr,Lumen Énergie,Directeur commercial,Toulouse,oui,0.7,0.4,1
+5,Anne-Sophie Bertrand,as.bertrand@corvus-avocats.fr,Corvus Avocats,Associée,Bordeaux,Anne Sophie Bertrand,asbertrand@corvus.fr,Corvus,Avocate associée,Bordeaux,oui,0.94,0.88,0
+6,Maud Lefèvre,maud@atelier-maud.fr,Atelier Maud,Fondatrice,Annecy,Marie Lefèvre,marie.lefevre@atelier-maud.fr,Atelier Maud,Responsable boutique,Annecy,non,0.06,0.88,0
+7,Karim Benali,k.benali@payfit.com,PayFit,SDR,Paris,Karim Benali,karim.benali@nuvola.fr,Nuvola,Account Executive,Lyon,oui,0.67,0.34,1
+8,Sophie Renard,sophie.renard@groupe-alea.fr,Groupe Aléa,Directrice marketing,Paris,Sophie Renard-Duval,s.renardduval@groupe-alea.fr,Groupe Aléa,Directrice marketing,Paris,oui,0.89,0.78,0
+9,J. Bertrand,contact@menuiserie-bertrand.fr,Menuiserie Bertrand & Fils,Gérant,Angers,Jean Bertrand,jean.bertrand@orange.fr,Menuiserie Bertrand,Gérant,Angers,oui,0.9,0.8,0
+10,Pierre Lambert,pierre.lambert@lumen-energie.fr,Lumen Énergie,Business Developer,Toulouse,Lambert Pierre,p.lambert@vertigo-robotics.com,Vertigo Robotics,Ingénieur mécanique,Nantes,oui,0.53,0.06,1

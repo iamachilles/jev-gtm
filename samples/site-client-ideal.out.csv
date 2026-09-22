@@ -1,0 +1,11 @@
+id,entreprise,page_accueil,client_ideal,client_ideal_p_oui,client_ideal_confidence,a_verifier
+1,Nuvola,La plateforme qui connecte les PME industrielles françaises à des distributeurs à l'export. Déjà 400 entreprises accompagnées dans 30 pays. Demandez une démo avec un expert export.,oui,0.65,0.3,1
+2,Atelier Maud,Bijoux en argent fabriqués à la main à Annecy. Livraison offerte dès 80 €. Découvrez la collection d'automne.,non,0.01,0.98,0
+3,Vertigo Robotics,"Robots de tri autonomes pour les entrepôts logistiques. Nos clients : Geodis, Cdiscount, La Poste. Parlez à un ingénieur commercial.",oui,0.95,0.9,0
+4,Boulangerie Martin,"Pain au levain, viennoiseries maison. Ouvert du mardi au dimanche de 6h30 à 19h30, rue Nationale à Lille.",non,0.01,0.98,0
+5,Groupe Aléa,"Courtier en assurance des entreprises depuis 1987 : flotte, RC pro, prévoyance collective. Un chargé d'affaires dédié à chaque client. Obtenez une étude personnalisée.",oui,0.75,0.5,1
+6,Growthline,"Agence de prospection B2B : on remplit l'agenda de vos commerciaux. 200 clients, 15 000 rendez-vous pris. Réservez un appel découverte.",non,0.04,0.92,0
+7,Lumen Énergie,"Producteur d'électricité solaire pour les sites industriels et les collectivités. Autoconsommation, contrats de 20 ans, étude gratuite de votre toiture.",oui,0.73,0.46,1
+8,Association Les Jardins du Nord,"Association d'insertion par le maraîchage à Roubaix. Adhérez, faites un don, commandez votre panier hebdomadaire.",non,0.02,0.96,0
+9,Formation Cap Réussite,"Organisme de formation en anglais professionnel. Cours particuliers finançables par le CPF, et programmes sur mesure pour les entreprises.",non,0.44,0.12,1
+10,Corvus Avocats,"Cabinet d'avocats d'affaires à Bordeaux. Droit des sociétés, contrats commerciaux, contentieux. Nous accompagnons dirigeants de PME et ETI. Premier échange sans engagement.",oui,0.63,0.26,1

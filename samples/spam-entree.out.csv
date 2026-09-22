@@ -1,0 +1,11 @@
+id,nom,email,entreprise,message,est_reel,est_reel_p_oui,est_reel_confidence,a_verifier
+1,Marie Durand,marie.durand@nuvola.fr,Nuvola,"Bonjour, nous cherchons un partenaire pour lancer notre prospection sur le marché allemand. Pouvez-vous me rappeler cette semaine ?",oui,0.84,0.68,1
+2,asdf asdf,asdf@asdf.com,asdf,asdf asdf asdf,non,0.02,0.96,0
+3,John Smith,seo.expert.john@gmail.com,SEO Boost Agency,"Hi, I noticed your website is not ranking on Google. We can get you to page 1 in 30 days. Reply for a free audit.",non,0.02,0.96,0
+4,Thomas Lefèvre,t.lefevre@bellune-textile.fr,Bellune Textile,Un devis svp,oui,0.89,0.78,0
+5,Best Crypto,invest@crypto-profit.biz,Crypto Profit,Earn 300% in 30 days with our automated trading bot. https://crypto-profit.biz/join,non,0.02,0.96,0
+6,Camille Roux,camille.roux@vertigo-robotics.com,Vertigo Robotics,Est-ce que vous travaillez avec des industriels de moins de 50 personnes ? On a un commercial à alimenter en rendez-vous.,oui,0.6,0.2,1
+7,Nathan Petit,nathan.petit@gmail.com,Groupe Aléa,"Bonjour, je suis responsable marketing chez Groupe Aléa, je voudrais un échange sur vos offres de prospection. Mon adresse pro filtre les formulaires, d'où le gmail.",oui,0.63,0.26,1
+8,Olga Ivanova,olga.ivanova.9981@mail.ru,Ivanova Ltd,"Добрый день, предлагаем базы данных для рассылок. Пишите в Telegram.",non,0.04,0.92,0
+9,Test Test,test@test.com,Test,test,non,0.02,0.96,0
+10,Julie Marchand,julie@corvus-avocats.fr,Corvus Avocats,"Suite au webinaire de mardi, je souhaiterais recevoir la présentation et discuter d'un accompagnement pour notre pôle contentieux.",oui,0.89,0.78,0

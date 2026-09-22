@@ -1,0 +1,11 @@
+id,nom,description,site_web,segment,segment_confidence,segment_p_industrie,segment_p_logiciel_saas,segment_p_commerce_distribution,segment_p_autre,segment_p_services_b2b,segment_p_sante,segment_p_finance_assurance,segment_p_batiment_immobilier,a_verifier
+1,Nuvola,"Plateforme SaaS qui aide les PME industrielles à vendre à l'export : catalogue multilingue, devis et suivi des distributeurs.",nuvola.fr,logiciel_saas,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0
+2,Corvus Avocats,"Cabinet d'avocats d'affaires à Bordeaux : droit des sociétés, fusions-acquisitions, contentieux commercial.",corvus-avocats.fr,services_b2b,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0
+3,Bellune Textile,"Tissage et ennoblissement de tissus techniques pour l'automobile et le mobilier, fondée en 1921 à Roubaix.",bellune-textile.fr,industrie,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0
+4,Atelier Maud,"Bijoux en argent faits main, vendus en boutique à Annecy et en ligne.",ateliermaud.fr,commerce_distribution,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0
+5,Groupe Aléa,"Courtier en assurance pour les entreprises depuis 1987 : flotte, responsabilité civile, prévoyance collective.",groupe-alea.fr,finance_assurance,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0
+6,Lumen Énergie,"Producteur d'électricité solaire pour les sites industriels, conception et exploitation de centrales en toiture.",lumen-energie.fr,autre,0.88,0.05,0.0,0.0,0.9,0.03,0.0,0.0,0.02,0
+7,Vertigo Robotics,Concepteur et fabricant de robots de tri pour les entrepôts logistiques.,vertigo-robotics.com,industrie,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0
+8,Habitat Rive Gauche,Promoteur immobilier à Toulouse : programmes neufs de logements et de bureaux.,habitat-rivegauche.fr,batiment_immobilier,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0
+9,Clinique des Cèdres,"Clinique privée de chirurgie ambulatoire à Grenoble, 40 praticiens.",clinique-cedres.fr,sante,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0
+10,Martin Technologies,"ESN spécialisée dans le cloud et l'infogérance pour les ETI, 320 consultants.",martin-technologies.fr,services_b2b,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0

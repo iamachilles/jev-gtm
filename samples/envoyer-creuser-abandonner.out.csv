@@ -1,0 +1,11 @@
+id,entreprise,secteur,effectif,score_fit,contact_identifie,signal_recent,decision,decision_confidence,decision_p_abandonner,decision_p_envoyer,decision_p_creuser,a_verifier
+1,Nuvola,Logiciel de gestion export,38,3,"Claire Maréchal, CEO",Offre d'emploi SDR publiée le 12/09/2026,envoyer,1.0,0.0,1.0,0.0,0
+2,Boulangerie Martin,Boulangerie artisanale,12,0,"Pierre Martin, gérant",aucun,abandonner,0.96,0.98,0.0,0.02,0
+3,Vertigo Robotics,Robots de tri logistique,25,3,aucun,Levée de 4 M€ annoncée le 03/09/2026,creuser,1.0,0.0,0.0,1.0,0
+4,Groupe Aléa,Courtage en assurance pour les entreprises,320,2,"Sophie Renard, directrice commerciale",Ouverture d'une agence à Lille,abandonner,0.69,0.8,0.0,0.2,1
+5,Lumen Énergie,Installation solaire pour industriels,60,2,"Karim Benali, directeur commercial",aucun,envoyer,0.97,0.0,0.98,0.02,0
+6,Corvus Avocats,Cabinet d'avocats d'affaires,14,2,Standard du cabinet,aucun,creuser,1.0,0.0,0.0,1.0,0
+7,Bellune Textile,Tissage et ennoblissement,140,1,"Hélène Duval, DRH",Recrute un contrôleur de gestion,abandonner,0.56,0.7,0.01,0.29,1
+8,Martin Technologies,ESN cloud,85,3,"Julien Marchand, CEO",Vient de signer avec une agence outbound (post du 15/09/2026),envoyer,0.46,0.34,0.64,0.02,1
+9,Atelier Maud,Joaillerie artisanale,3,1,"Maud Lefèvre, fondatrice",Nouvelle collection en boutique,abandonner,1.0,1.0,0.0,0.0,0
+10,Hélios Formation,Organisme de formation B2B,inconnu,2,"Marc Ollivier, directeur du développement",Post : « on cherche à remplir nos sessions inter-entreprises »,creuser,0.98,0.0,0.01,0.99,0

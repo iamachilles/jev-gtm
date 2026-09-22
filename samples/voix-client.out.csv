@@ -1,0 +1,11 @@
+id,commentaire,objection,objection_confidence,objection_p_demande_methode,objection_p_demande_preuve,objection_p_temoignage,objection_p_trop_cher,objection_p_demande_outil,objection_p_aucun,objection_p_doute_qualite_ia,objection_p_pas_le_temps,objection_p_risque_conformite,a_verifier
+1,"Sur le papier c'est top, mais à 300 € par mois l'outil plus les crédits d'enrichissement, pour une boîte de 8 personnes je ne vois pas le retour.",trop_cher,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0
+2,"On a testé pendant 2 mois : 4 % de réponses, 3 rendez-vous, et un client signé. On continue.",temoignage,0.99,0.0,0.01,0.99,0.0,0.0,0.0,0.0,0.0,0.0,0
+3,Tu utilises quoi comme séquenceur derrière ? lemlist ou La Growth Machine ?,demande_outil,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0
+4,Super post 🔥,aucun,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0
+5,"Le problème c'est que les messages sentent l'IA à trois kilomètres, mes prospects me l'ont dit en face.",doute_qualite_ia,0.97,0.0,0.0,0.03,0.0,0.0,0.0,0.97,0.0,0.0,0
+6,"Et le RGPD dans tout ça ? Envoyer 500 emails par jour à des gens qui n'ont rien demandé, ça finit en spam ou en plainte.",risque_conformite,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0
+7,Tu as des chiffres sur le taux de réponse comparé à un SDR humain ?,demande_preuve,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0
+8,"J'aimerais bien mais je n'ai personne pour monter ça, on est 3 et je fais déjà la compta le soir.",pas_le_temps,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0
+9,"Tu peux détailler l'étape de qualification ? Le prompt que tu donnes au modèle, tu le construis comment ?",demande_methode,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0
+10,"Ça marche peut-être en SaaS, mais dans le BTP mes clients ne lisent pas leurs emails, et de toute façon ça coûte un bras.",trop_cher,0.87,0.0,0.0,0.11,0.89,0.0,0.0,0.0,0.0,0.0,0

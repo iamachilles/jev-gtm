@@ -1,0 +1,11 @@
+id,poste,entreprise,secteur,effectif,signal,notes,angle,angle_confidence,angle_p_nouveau_marche,angle_p_levee_de_fonds,angle_p_standard,angle_p_dirigeant_seul_a_vendre,angle_p_outillage_absent,angle_p_recrutement_commercial,a_verifier
+1,CEO,Nuvola,Logiciel de gestion export,38,Offre d'emploi SDR publiée le 12/09/2026,"Deux account executives en place, aucun SDR jusqu'ici",recrutement_commercial,0.99,0.0,0.0,0.01,0.0,0.0,0.99,0
+2,Fondateur,Vertigo Robotics,Robotique logistique,25,Levée de 4 M€ annoncée le 03/09/2026,Le fondateur écrit « accélérer le commercial » dans son post,levee_de_fonds,0.97,0.0,0.98,0.01,0.01,0.0,0.0,0
+3,Gérant,Menuiserie Bertrand & Fils,Menuiserie industrielle,22,aucun,"Le gérant fait lui-même les devis et les visites clients, aucun commercial",dirigeant_seul_a_vendre,1.0,0.0,0.0,0.0,1.0,0.0,0.0,0
+4,Directeur commercial,Lumen Énergie,Solaire pour industriels,60,Ouverture d'une agence à Nantes (post du 08/09/2026),"Trois commerciaux, tous basés à Toulouse",nouveau_marche,0.68,0.73,0.0,0.02,0.0,0.0,0.25,1
+5,Directrice commerciale,Groupe Aléa,Courtage en assurance,320,aucun,"Appel découverte : « on gère les relances sur Excel, on n'a jamais eu de CRM »",outillage_absent,0.99,0.0,0.0,0.01,0.0,0.99,0.0,0
+6,Associé,Corvus Avocats,Avocats d'affaires,14,aucun,Rien de particulier trouvé,standard,0.99,0.0,0.0,0.99,0.01,0.0,0.0,0
+7,CEO,Martin Technologies,ESN cloud,85,Head of Sales recruté en janvier 2026 ; levée de 2 M€ annoncée le 10/09/2026,Head of Sales en poste depuis huit mois,levee_de_fonds,0.74,0.0,0.79,0.04,0.0,0.0,0.17,0
+8,Fondatrice,Atelier Maud,Joaillerie,3,aucun,Vend en boutique et sur Instagram,dirigeant_seul_a_vendre,0.76,0.0,0.0,0.2,0.8,0.0,0.0,0
+9,Head of Sales,Hélios Formation,Formation professionnelle B2B,45,Lancement d'une offre inter-entreprises en septembre 2026,Équipe de 2 commerciaux dédiée aux formations intra,nouveau_marche,0.46,0.56,0.0,0.01,0.0,0.0,0.43,1
+10,Président,Bellune Textile,Textile,140,Recrute un business developer (offre du 18/09/2026),"Note : « on n'a jamais prospecté, tout vient du bouche-à-oreille, aucun outil »",recrutement_commercial,0.9,0.0,0.0,0.01,0.01,0.07,0.91,0

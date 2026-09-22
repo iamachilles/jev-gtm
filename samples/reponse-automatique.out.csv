@@ -1,0 +1,11 @@
+id,objet,reponse,automatique,automatique_p_oui,automatique_confidence,a_verifier
+1,Réponse automatique : Prospection PME,"Bonjour, je suis absente jusqu'au 6 octobre. Pour toute urgence, contactez accueil@groupe-alea.fr. Cordialement, Sophie Renard",oui,0.95,0.9,0
+2,RE: Prospection PME,"Bonjour, merci pour votre message. Le sujet n'est pas d'actualité chez nous, bonne continuation. Marc",non,0.05,0.9,0
+3,Undeliverable: Prospection PME,Delivery has failed to these recipients or groups: j.dupont@bellune-textile.fr. The email address you entered couldn't be found.,oui,0.98,0.96,0
+4,RE: Prospection PME,"Je suis en déplacement toute la semaine, je regarde ça à mon retour et je vous dis. Julien",non,0.06,0.88,1
+5,Votre demande a bien été reçue [#48213],"Bonjour, nous avons bien reçu votre demande. Un conseiller vous répondra sous 48 heures ouvrées. Service client Lumen Énergie",oui,0.96,0.92,0
+6,RE: Prospection PME,"Pouvez-vous m'envoyer une plaquette et vos tarifs ? Merci. Claire Morel, CEO Nuvola",non,0.03,0.94,0
+7,Automatic reply: Prospection PME,Thank you for your email. I have left Vertigo Robotics. Please contact sales@vertigo-robotics.com for any business request.,oui,0.9,0.8,1
+8,RE: Prospection PME,Merci de ne plus m'écrire.,non,0.07,0.86,1
+9,Mail delivery failed: returning message to sender,This message was created automatically by mail delivery software. Mailbox quota exceeded for contact@atelier-maud.fr,oui,0.99,0.98,0
+10,RE: Prospection PME,"Bonjour, je ne travaille plus sur ces sujets, je transfère à Thomas Delmas qui vous répondra directement. Bien à vous, Anne",non,0.14,0.72,1

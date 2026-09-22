@@ -1,0 +1,11 @@
+id,texte,theme,theme_confidence,theme_p_retour_experience,theme_p_contenu_linkedin,theme_p_outils_ia,theme_p_autre,theme_p_recrutement_vente,theme_p_prospection,theme_p_strategie_gtm,a_verifier
+1,"J'ai envoyé 1 200 emails froids en septembre. 4,1 % de réponses, 11 rendez-vous. Ce qui a changé par rapport à août : un seul objet, une seule phrase de contexte, zéro pièce jointe.",prospection,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0
+2,"J'ai fait tourner Jev, le modèle de TypeSafe, sur 5 000 intitulés LinkedIn. 80 % d'accord avec GPT-4o mini pour 0,17 $. Le détail du test en commentaire.",outils_ia,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0
+3,Trois ans que je poste tous les jours. Le seul format qui a doublé mes impressions : une phrase par ligne et un chiffre dans la première.,contenu_linkedin,0.99,0.01,0.99,0.0,0.0,0.0,0.0,0.0,0
+4,On a recruté notre premier SDR en juin. Erreur numéro un : lui donner une liste avant de lui donner un script. Il a mis 8 semaines à booker son premier rendez-vous.,recrutement_vente,0.63,0.18,0.0,0.0,0.0,0.68,0.14,0.0,1
+5,On a divisé notre prix par deux et doublé notre chiffre d'affaires. Les ETI nous ignoraient. Les PME de 20 à 50 personnes signent en deux appels.,strategie_gtm,0.98,0.02,0.0,0.0,0.0,0.0,0.0,0.98,0
+6,"Il y a un an je fermais ma boîte. Aujourd'hui je signe mon dixième client. Pas de leçon, juste envie de le dire.",retour_experience,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0
+7,"Ravi d'annoncer que je serai au salon SME Expo le 14 octobre, stand B12. Venez discuter !",autre,0.99,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0
+8,Un agent IA qui lit chaque réponse de campagne et la range dans le bon pipeline : voilà ce qu'on a construit ce mois-ci. Résultat : plus aucune relance oubliée sur 400 conversations.,outils_ia,0.74,0.0,0.0,0.79,0.0,0.0,0.21,0.0,0
+9,Bravo à toute l'équipe de Nuvola pour cette levée de 4 M€ ! Fier d'avoir été là au début.,autre,0.85,0.13,0.0,0.0,0.87,0.0,0.0,0.0,0
+10,"Votre ICP tient sur une ligne ou sur une page ? Si c'est une page, vos commerciaux ne l'ont jamais lue.",strategie_gtm,0.98,0.0,0.01,0.0,0.0,0.0,0.0,0.99,0

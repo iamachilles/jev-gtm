@@ -1,0 +1,11 @@
+id,titre,entreprise,secteur,effectif,localisation,enrichir,enrichir_p_oui,enrichir_confidence,a_verifier
+1,Directeur commercial,Nuvola,Édition de logiciels,20 à 49,"Lyon, France",oui,0.95,0.9,0
+2,Stagiaire marketing,Groupe Aléa,Assurance,201 à 500,"Paris, France",non,0.02,0.96,0
+3,CEO,Vertigo Robotics,Automatisation industrielle,11 à 50,"Nantes, France",oui,0.94,0.88,0
+4,Head of Sales,Bellune Textile,Textile,51 à 200,"Roubaix, France",oui,0.93,0.86,0
+5,Gérante,Boulangerie Martin,Commerce de détail alimentaire,2 à 10,"Lille, France",non,0.03,0.94,0
+6,Directeur des ressources humaines,Lumen Énergie,Énergies renouvelables,51 à 200,"Toulouse, France",non,0.03,0.94,0
+7,Coach de dirigeants | Fondatrice Atelier Maud Coaching,Atelier Maud Coaching,Formation et coaching,1,"Annecy, France",non,0.04,0.92,0
+8,VP Sales Europe,PayFit,Logiciels,501 à 1 000,"Paris, France",non,0.04,0.92,0
+9,Fondateur,Corvus Avocats,Services juridiques,11 à 50,"Bordeaux, France",oui,0.65,0.3,1
+10,Country Manager France,Martin Technologies,Services informatiques,non renseigné,"Genève, Suisse",non,0.46,0.08,1

@@ -1,0 +1,11 @@
+id,entreprise,evenement,angle,soutient,soutient_p_oui,soutient_confidence,a_verifier
+1,Nuvola,"2026-09-18 : offre d'emploi pour un premier SDR, mission : structurer la prospection sortante",Vous constituez une équipe de prospection sortante,oui,0.94,0.88,0
+2,Bellune Textile,2026-09-02 : obtention du label Entreprise du Patrimoine Vivant,Vous accélérez votre développement commercial,non,0.23,0.54,1
+3,Vertigo Robotics,2026-08-20 : ouverture d'un bureau à Munich,Vous vous développez sur le marché allemand,oui,0.96,0.92,0
+4,Groupe Aléa,"2026-09-18 : gel des recrutements annoncé en interne, relayé par la presse régionale",Vous êtes en pleine croissance,non,0.02,0.96,0
+5,Lumen Énergie,2026-09-15 : passage sur HubSpot et branchement d'un séquenceur,Vous outillez votre équipe commerciale,oui,0.8,0.6,0
+6,Corvus Avocats,2025-03-10 : arrivée d'un nouvel associé en droit social,Vous venez de renforcer votre équipe,oui,0.64,0.28,1
+7,Atelier Maud,2026-09-12 : photo de l'équipe au séminaire annuel,Vous réorganisez votre équipe commerciale,non,0.05,0.9,0
+8,Martin Technologies,2026-09-05 : levée de 4 M€ pour accélérer le déploiement commercial en Europe,Vous accélérez votre croissance commerciale,oui,0.94,0.88,0
+9,Maison Roussel,2026-09-14 : offre d'emploi Responsable marketing digital,Vous structurez votre prospection sortante,non,0.24,0.52,1
+10,Groupe Delorme Logistique,2026-09-10 : nomination d'une nouvelle directrice commerciale venue de chez un concurrent,Vous repensez votre approche commerciale,oui,0.55,0.1,1

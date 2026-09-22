@@ -1,0 +1,11 @@
+id,poste,entreprise,connecte_le,tri,tri_confidence,tri_p_ignorer,tri_p_revoir,tri_p_contacter,a_verifier
+1,Directeur général,Nuvola,12/03/2024,revoir,0.93,0.0,0.96,0.04,0
+2,Étudiante en master marketing digital,ESSEC Business School,04/09/2023,ignorer,1.0,1.0,0.0,0.0,0
+3,Fondateur & CEO,Vertigo Robotics,21/01/2026,contacter,0.97,0.0,0.02,0.98,0
+4,Talent Acquisition Manager,Groupe Aléa,15/06/2025,ignorer,0.99,0.99,0.01,0.0,0
+5,Responsable ADV,Bellune Textile,02/11/2022,revoir,0.96,0.01,0.97,0.02,0
+6,Consultant outbound indépendant,Freelance,30/05/2026,ignorer,0.98,0.99,0.01,0.0,0
+7,Directrice commerciale,Lumen Énergie,08/02/2025,revoir,0.74,0.02,0.83,0.15,1
+8,Chargé de mission développement économique,Métropole de Nantes,19/10/2021,ignorer,0.93,0.96,0.04,0.0,0
+9,Présidente,Groupe Aléa,27/07/2024,revoir,0.99,0.0,0.99,0.01,0
+10,Gérant,Atelier Maud,03/04/2026,revoir,0.99,0.0,1.0,0.0,0
