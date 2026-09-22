@@ -1,0 +1,27 @@
+{
+  "slug": "avant-enrichissement",
+  "titre": "Filtrer les leads avant de payer un enrichissement",
+  "description": "Un export brut (Sales Navigator, Apollo, un scrape) contient des lignes qu'on ne veut pas payer à enrichir : hors pays, hors taille, mauvais rôle, prestataire, stagiaire. Jev lit ce qu'on sait déjà du lead (titre, entreprise, secteur, effectif, localisation) et dit s'il vaut un crédit d'enrichissement. Les règles ci-dessous sont un exemple pour une offre de prospection externalisée aux PME B2B françaises : à réécrire dans `icp_rules`. Sous le seuil, la ligne va à un humain plutôt qu'à l'enrichisseur.",
+  "categorie": "qualifier",
+  "colonnes": [
+    "titre",
+    "entreprise",
+    "secteur",
+    "effectif",
+    "localisation"
+  ],
+  "seuil_confiance": 0.7,
+  "questions": {
+    "enrichir": {
+      "type": "noul",
+      "instructions": {
+        "icp_rules": "We want French companies (or French offices) with 10 to 250 employees that sell to other businesses, and inside them people who own sales, growth or the company itself: founder, CEO, DG, directeur commercial, head of sales, head of growth, VP sales. We do not want: consumer-facing businesses (retail shops, restaurants, real estate agencies serving individuals), public bodies, schools, associations, freelancers and agencies selling services to executives, groups above 250 employees, students, interns, job seekers, roles far from sales (HR, accounting, engineering, support).",
+        "question": "Given `icp_rules`, is it worth spending an enrichment credit (email and phone lookup) on this lead? Decide from `titre`, `entreprise`, `secteur`, `effectif` and `localisation` only. A missing or vague value is no reason to reject: reject only on a value that contradicts the rules."
+      },
+      "criteria": {
+        "true": "Nothing in the known fields contradicts the rules and the role is one we want: the lead is worth enriching.",
+        "false": "At least one known field contradicts the rules: wrong country, size outside the range, consumer-facing or public sector, a provider or freelancer, a student or intern, or a role with no link to sales or leadership."
+      }
+    }
+  }
+}

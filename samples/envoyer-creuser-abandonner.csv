@@ -1,0 +1,11 @@
+id,entreprise,secteur,effectif,score_fit,contact_identifie,signal_recent
+1,Nuvola,Logiciel de gestion export,38,3,"Claire Maréchal, CEO",Offre d'emploi SDR publiée le 12/09/2026
+2,Boulangerie Martin,Boulangerie artisanale,12,0,"Pierre Martin, gérant",aucun
+3,Vertigo Robotics,Robots de tri logistique,25,3,aucun,Levée de 4 M€ annoncée le 03/09/2026
+4,Groupe Aléa,Courtage en assurance pour les entreprises,320,2,"Sophie Renard, directrice commerciale",Ouverture d'une agence à Lille
+5,Lumen Énergie,Installation solaire pour industriels,60,2,"Karim Benali, directeur commercial",aucun
+6,Corvus Avocats,Cabinet d'avocats d'affaires,14,2,Standard du cabinet,aucun
+7,Bellune Textile,Tissage et ennoblissement,140,1,"Hélène Duval, DRH",Recrute un contrôleur de gestion
+8,Martin Technologies,ESN cloud,85,3,"Julien Marchand, CEO",Vient de signer avec une agence outbound (post du 15/09/2026)
+9,Atelier Maud,Joaillerie artisanale,3,1,"Maud Lefèvre, fondatrice",Nouvelle collection en boutique
+10,Hélios Formation,Organisme de formation B2B,inconnu,2,"Marc Ollivier, directeur du développement",Post : « on cherche à remplir nos sessions inter-entreprises »

@@ -1,0 +1,41 @@
+{
+  "slug": "appel-offres",
+  "titre": "Qualifier un appel d'offres : fit et chances de gain",
+  "description": "Chaque avis de marché repéré (BOAMP, plateformes d'acheteurs, veille) passe devant Jev avec un résumé de son texte. Jev rend deux notes de 0 à 3, le fit avec l'offre et les chances de gagner, et on ne lit en entier que les avis notés 2 ou 3 sur les deux. La grille décrit une agence de développement web et data de 40 personnes à Lyon : à réécrire pour votre offre et vos contraintes (taille, certifications, zone).",
+  "categorie": "qualifier",
+  "colonnes": [
+    "acheteur",
+    "objet",
+    "texte"
+  ],
+  "seuil_confiance": 0.7,
+  "max_chars_par_colonne": 4000,
+  "questions": {
+    "fit": {
+      "type": "score",
+      "instructions": {
+        "offer": "We are a 40-person agency in Lyon building custom web applications, data platforms and public websites, with hosting and maintenance. We do not sell hardware, network infrastructure, ERP licences, printing or training alone.",
+        "question": "Given `offer`, rate how closely the tender (`objet` and `texte`, published by `acheteur`) matches what we sell."
+      },
+      "criteria": [
+        "0, out of scope: works, cleaning, supplies, catering, legal or financial services, anything unrelated to software or digital services.",
+        "1, distant: IT or digital but another trade: hardware or network supply, telephony, printing, ERP or licence purchase, pure training or consulting, audiovisual production.",
+        "2, close: a web, data or software mission where a large part of the scope is outside our offer: a mobile app, a heavy ERP integration, a data platform bundled with on-site infrastructure, or a mission where development is a minor lot.",
+        "3, core: custom web application, data platform, website or portal redesign with development, hosting and maintenance, exactly our offer."
+      ]
+    },
+    "chances": {
+      "type": "score",
+      "instructions": {
+        "constraints": "We can staff up to 8 people on a project, mostly remote from Lyon. We hold no ISO 27001 or HDS certification. Our references are regional councils, universities, public agencies and mid-sized companies, all in France. Budgets under 30 k€ are not worth the response effort; budgets over 1 M€ are beyond our size.",
+        "question": "Given `constraints`, rate our chances of winning the tender described in `texte`. Look for eliminatory requirements, budget, deadline, award criteria and any sign of an incumbent."
+      },
+      "criteria": [
+        "0, no chance: an eliminatory requirement we do not meet (ISO 27001 or HDS required, more than 8 people on site, a mandatory office outside France, budget over 1 M€), or the text renews an existing contract with the current provider.",
+        "1, low: response deadline under 10 days, budget under 30 k€, award criteria weighted mostly on price, or wording that hints at a preferred provider ('reconduction', 'prestataire en place').",
+        "2, fair: budget between 30 k€ and 500 k€, criteria weighted on technical quality, no eliminatory requirement, a buyer type we have already served.",
+        "3, high: all of level 2 plus a public buyer or a sector where we hold references (collectivités, universités, agences publiques), a scope sized for a team of 3 to 8 people, and a deadline of three weeks or more."
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+id,poste,entreprise,source,historique
+1,Directeur général,Nuvola,formulaire site,2026-09-21 : a rempli le formulaire en demandant à être rappelé jeudi matin
+2,Responsable marketing,Bellune Textile,téléchargement guide,"2026-08-30 : téléchargement du guide ; 2026-09-03 : email de suivi, non ouvert ; 2026-09-10 : deuxième email, non ouvert"
+3,Head of Sales,Vertigo Robotics,outbound,"2026-09-08 : email 1 envoyé ; 2026-09-15 : réponse : intéressant, quel est votre tarif pour 500 comptes ?"
+4,Directrice commerciale,Lumen Énergie,salon,"2026-06-12 : badge scanné au salon ; 2026-06-20 : email, sans réponse ; 2026-07-05 : appel, messagerie ; 2026-08-02 : appel, messagerie ; 2026-09-01 : email, non ouvert"
+5,Associé,Corvus Avocats,recommandation,"2026-09-20 : recommandé par un client, aucun contact encore"
+6,Fondateur,Martin Technologies,outbound,2026-09-02 : proposition envoyée ; 2026-09-18 : le fondateur écrit que le comité tranche le 25/09
+7,Chef de projet,Groupe Aléa,webinaire,"2026-09-16 : présent au webinaire ; 2026-09-17 : email de suivi ouvert 3 fois, lien cliqué, sans réponse"
+8,Gérant,Menuiserie Bertrand & Fils,outbound,"2026-09-11 : réponse : merci mais revenez plutôt en janvier, on boucle notre saison"
+9,Directeur des opérations,Groupe Delorme Logistique,outbound,"2026-09-19 : réponse : ok pour un échange de 20 minutes, proposez-moi des créneaux"
+10,Business Developer,Atelier Maud,outbound,"2026-09-04 : email 1 envoyé, non ouvert ; 2026-09-12 : email 2, ouvert une fois"

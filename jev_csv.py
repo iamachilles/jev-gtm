@@ -157,37 +157,33 @@ def aplatir(qid: str, rep: dict, question_def: dict) -> dict:
     return out
 
 
-def main() -> int:
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--question", required=True, type=Path, help="fichier questions/<slug>.json")
-    ap.add_argument("--csv", required=True, type=Path, help="CSV d'entrée (UTF-8, en-tête sur la première ligne)")
-    ap.add_argument("--out", type=Path, help="CSV de sortie (défaut : <entrée>.out.csv)")
-    ap.add_argument("--apply", action="store_true", help="appelle vraiment l'API (payant) ; sans ce drapeau, estimation seule")
-    ap.add_argument("--dry-run", action="store_true", help="explicite : estimation seule (comportement par défaut)")
-    ap.add_argument("--limit", type=int, help="ne traiter que les N premières lignes")
-    ap.add_argument("--workers", type=int, default=8, help="appels en parallèle (défaut 8)")
-    ap.add_argument("--seuil", type=float, help="seuil de confiance sous lequel la ligne passe en a_verifier (défaut : celui du fichier de question)")
-    a = ap.parse_args()
+def executer(question_path: Path, csv_path: Path, *, apply: bool = False, out: Path | None = None, limit: int | None = None,
+             workers: int = 8, seuil: float | None = None, api_key: str | None = None, silencieux: bool = False) -> dict:
+    """Le cœur du lanceur : estimation, puis appels si `apply`. Rend un dictionnaire de résultats.
 
+    Utilisé par la ligne de commande ci-dessous et par `jev.py` (le script guidé).
+    """
+    dire = (lambda *a, **k: None) if silencieux else print
     charger_env()
-    question = charger_question(a.question)
-    colonnes, lignes = lire_csv(a.csv, a.limit)
+    question = charger_question(question_path)
+    colonnes, lignes = lire_csv(csv_path, limit)
     manquantes = [c for c in colonnes_attendues(question) if c not in colonnes]
     if manquantes:
-        sys.exit(f"Colonnes absentes du CSV : {manquantes}. Colonnes trouvées : {colonnes}. Renomme tes colonnes ou adapte `colonnes` dans {a.question}.")
-    seuil = a.seuil if a.seuil is not None else question["seuil_confiance"]
+        raise SystemExit(f"Colonnes absentes du CSV : {manquantes}. Colonnes trouvées : {colonnes}. Renomme tes colonnes ou adapte `colonnes` dans {question_path}.")
+    seuil = seuil if seuil is not None else question["seuil_confiance"]
     states = [construire_state(question, l) for l in lignes]
     tokens = sum(estimer_tokens(question, s) for s in states)
     cout = tokens / 1_000_000 * PRIX_PAR_MILLION_TOKENS
-    print(f"{question['titre']} ({question['slug']})")
-    print(f"{len(lignes)} lignes, {len(question['questions'])} question(s) par ligne, ~{tokens:,} tokens en entrée, coût estimé ~{cout:.4f} $ (sortie gratuite)")
-    if not a.apply:
-        print("Estimation seule. Ajoute --apply pour lancer les appels.")
-        return 0
+    res = {"slug": question["slug"], "titre": question["titre"], "lignes": len(lignes), "questions": len(question["questions"]), "tokens_estimes": tokens, "cout_estime": cout}
+    dire(f"{question['titre']} ({question['slug']})")
+    dire(f"{len(lignes)} lignes, {len(question['questions'])} question(s) par ligne, ~{tokens:,} tokens en entrée, coût estimé ~{cout:.4f} $ (sortie gratuite)")
+    if not apply:
+        dire("Estimation seule. Ajoute --apply pour lancer les appels.")
+        return res
 
-    api_key = os.environ.get("TYPESAFE_API_KEY", "")
+    api_key = api_key or os.environ.get("TYPESAFE_API_KEY", "")
     if not api_key:
-        sys.exit("TYPESAFE_API_KEY absent (environnement ou fichier .env à côté du script)")
+        raise SystemExit("TYPESAFE_API_KEY absent (environnement ou fichier .env à côté du script)")
     cache_path = Path(__file__).resolve().parent / ".cache" / f"{question['slug']}.jsonl"
     cache_path.parent.mkdir(exist_ok=True)
     cache: dict[str, dict] = {}
@@ -197,11 +193,11 @@ def main() -> int:
                 d = json.loads(l)
                 cache[d["cle"]] = d["reponse"]
     a_faire = [(i, s) for i, s in enumerate(states) if cle_cache(question, s) not in cache]
-    print(f"{len(states) - len(a_faire)} réponses en cache, {len(a_faire)} appels à faire")
+    dire(f"{len(states) - len(a_faire)} réponses en cache, {len(a_faire)} appels à faire")
     erreurs = 0
     tokens_reels = 0
     debut = time.time()
-    with cache_path.open("a", encoding="utf-8") as fc, ThreadPoolExecutor(max_workers=a.workers) as ex:
+    with cache_path.open("a", encoding="utf-8") as fc, ThreadPoolExecutor(max_workers=workers) as ex:
         futs = {ex.submit(appeler, question, s, api_key): (i, s) for i, s in a_faire}
         for n, fut in enumerate(as_completed(futs), 1):
             i, s = futs[fut]
@@ -215,9 +211,9 @@ def main() -> int:
             fc.write(json.dumps({"cle": cle_cache(question, s), "reponse": rep}, ensure_ascii=False) + "\n")
             tokens_reels += (rep.get("usage") or {}).get("input_tokens", 0)
             if n % 50 == 0 or n == len(a_faire):
-                print(f"  {n}/{len(a_faire)} ({time.time() - debut:.0f} s)", flush=True)
+                dire(f"  {n}/{len(a_faire)} ({time.time() - debut:.0f} s)")
 
-    sortie = a.out or a.csv.with_suffix(".out.csv")
+    sortie = out or csv_path.with_suffix(".out.csv")
     nouvelles: list[str] = []
     rangs = []
     for ligne, s in zip(lignes, states):
@@ -243,10 +239,26 @@ def main() -> int:
         w.writeheader()
         w.writerows(rangs)
     n_verif = sum(r["a_verifier"] for r in rangs)
-    print(f"{len(rangs)} lignes écrites dans {sortie} ; {n_verif} à vérifier (confiance < {seuil}) ; {erreurs} erreurs")
+    dire(f"{len(rangs)} lignes écrites dans {sortie} ; {n_verif} à vérifier (confiance < {seuil}) ; {erreurs} erreurs")
     if tokens_reels:
-        print(f"{tokens_reels:,} tokens facturés sur cet appel, soit {tokens_reels / 1_000_000 * PRIX_PAR_MILLION_TOKENS:.4f} $")
-    return 1 if erreurs else 0
+        dire(f"{tokens_reels:,} tokens facturés sur cet appel, soit {tokens_reels / 1_000_000 * PRIX_PAR_MILLION_TOKENS:.4f} $")
+    res.update({"sortie": str(sortie), "a_verifier": n_verif, "erreurs": erreurs, "tokens_factures": tokens_reels, "cout_reel": tokens_reels / 1_000_000 * PRIX_PAR_MILLION_TOKENS})
+    return res
+
+
+def main() -> int:
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument("--question", required=True, type=Path, help="fichier questions/<slug>.json")
+    ap.add_argument("--csv", required=True, type=Path, help="CSV d'entrée (UTF-8, en-tête sur la première ligne)")
+    ap.add_argument("--out", type=Path, help="CSV de sortie (défaut : <entrée>.out.csv)")
+    ap.add_argument("--apply", action="store_true", help="appelle vraiment l'API (payant) ; sans ce drapeau, estimation seule")
+    ap.add_argument("--dry-run", action="store_true", help="explicite : estimation seule (comportement par défaut)")
+    ap.add_argument("--limit", type=int, help="ne traiter que les N premières lignes")
+    ap.add_argument("--workers", type=int, default=8, help="appels en parallèle (défaut 8)")
+    ap.add_argument("--seuil", type=float, help="seuil de confiance sous lequel la ligne passe en a_verifier (défaut : celui du fichier de question)")
+    a = ap.parse_args()
+    res = executer(a.question, a.csv, apply=a.apply, out=a.out, limit=a.limit, workers=a.workers, seuil=a.seuil)
+    return 1 if res.get("erreurs") else 0
 
 
 if __name__ == "__main__":

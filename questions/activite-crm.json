@@ -1,0 +1,37 @@
+{
+  "slug": "activite-crm",
+  "titre": "Classer une activité (appel, email, message) pour mettre le CRM à jour",
+  "description": "Les notes d'appel, emails et messages LinkedIn s'entassent sans être qualifiés, et le pipeline du CRM ne bouge pas. Jev lit chaque activité brute (une note dictée après un appel, un email copié, un message) et répond à deux questions d'un coup : le type d'activité, et l'étape du pipeline que cette activité révèle. Les deux colonnes servent à créer l'activité au bon endroit et à faire avancer (ou reculer) l'affaire sans relecture. Les étapes sont celles d'un pipeline de vente B2B classique, à aligner sur les vôtres.",
+  "categorie": "nettoyer",
+  "colonnes": [
+    "activite"
+  ],
+  "seuil_confiance": 0.8,
+  "max_chars_par_colonne": 3000,
+  "questions": {
+    "type_activite": {
+      "type": "choice",
+      "instructions": "`activite` is a raw record logged by a salesperson or captured by a tool: a note written after a call, an email, a LinkedIn message, a meeting summary. Which type of activity is it? Decide from the form of the text: a note starting with 'Appel', 'Call', 'Tel' or describing a phone conversation or a voicemail is a call; a text with 'Objet :', 'Bonjour', a signature or 'Cordialement' is an email; a short message mentioning LinkedIn, an invitation or a DM is a LinkedIn message; a summary of a video call or a physical meeting with attendees is a meeting.",
+      "criteria": {
+        "appel": "A phone call: a note after a call, a voicemail left, a call attempt ('messagerie', 'rappeler jeudi', 'injoignable').",
+        "email": "An email sent or received: subject line, greeting, body, signature, or a note that says 'mail envoyé' or 'réponse par mail'.",
+        "message_linkedin": "A LinkedIn message, invitation note or comment exchange, usually short and informal, often quoted.",
+        "reunion": "A meeting held or scheduled, by video or in person: demo, discovery meeting, 'RDV', 'visio', 'point', with attendees or an agenda.",
+        "autre": "A CRM housekeeping note, a task, an internal remark, a feedback relayed without saying through which channel, or a text that fits none of the above."
+      }
+    },
+    "etape": {
+      "type": "choice",
+      "instructions": "After this activity, which stage of the sales pipeline does the deal belong to? Pick the stage the text shows, in this order of precedence: a signed contract or a firm yes beats everything; an explicit no or a lost deal beats everything except a signed contract; otherwise pick the most advanced stage the text mentions.",
+      "criteria": {
+        "prise_de_contact": "First outreach without a substantive answer yet: a first message sent, a call attempt, a voicemail, an invitation accepted, a polite acknowledgment.",
+        "decouverte": "The prospect engages to understand the need: a discovery call held or booked, questions about the current setup, a demo scheduled, information exchanged before any price.",
+        "proposition": "A proposal, quote or pricing has been sent or is explicitly requested: 'envoyez-moi une proposition', 'devis envoyé', 'voici nos tarifs'.",
+        "negociation": "The proposal is being discussed: price, scope, contract terms, legal review, a counter-offer, a decision expected at a given date.",
+        "gagne": "The deal is won: contract signed, order confirmed, 'c'est validé', 'on démarre le', purchase order received.",
+        "perdu": "The deal is lost or dropped: a clear no, a competitor chosen, the project cancelled, a request to stop contacting.",
+        "sans_objet": "The activity carries no information on the deal stage: an internal note, a task, a personal exchange, an out of office."
+      }
+    }
+  }
+}

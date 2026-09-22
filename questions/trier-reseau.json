@@ -1,0 +1,26 @@
+{
+  "slug": "trier-reseau",
+  "titre": "Trier son réseau LinkedIn : à contacter, à revoir, à ignorer",
+  "description": "Avant de relancer son réseau, on exporte ses relations LinkedIn (poste, entreprise, date de connexion) et Jev range chaque ligne dans une des trois cases à partir de la description de la cible. Les « contacter » partent dans une séquence, les « revoir » vont à une relecture humaine, les « ignorer » sortent de la liste sans lecture. La cible décrite dans `icp` est un exemple (un cabinet qui vend de la prospection externalisée aux PME B2B) : à réécrire pour votre offre.",
+  "categorie": "cibler",
+  "colonnes": [
+    "poste",
+    "entreprise",
+    "connecte_le"
+  ],
+  "seuil_confiance": 0.8,
+  "questions": {
+    "tri": {
+      "type": "choice",
+      "instructions": {
+        "icp": "We sell outsourced B2B prospecting to French SMEs (10 to 250 employees) that sell to other businesses: software, industry, B2B services, consulting, agencies. Buyers are founders, CEOs, managing directors and sales or marketing directors of those companies.",
+        "question": "Given `icp`, sort this LinkedIn connection using `poste` (job title) and `entreprise` (company). `connecte_le` is the connection date and only matters when the title looks outdated. Decide from the words in the title and the company name; do not guess what the company does when the name says nothing."
+      },
+      "criteria": {
+        "contacter": "Clear decision maker at a company that fits `icp`: Fondateur, CEO, Président, Directeur général, Gérant, Directeur commercial, Directrice marketing, Head of Sales, VP Sales, at a company whose name or title reveals a B2B activity (Robotics, Technologies, Logiciels, Conseil, Avocats, Industrie, Agence).",
+        "revoir": "Partial fit or missing information: a manager or responsable without clear decision power (Responsable ADV, Chef de projet, Business Developer), a decision maker at a company whose activity cannot be read from its name (Groupe Aléa, Atelier Maud), a title in a sector at the edge of `icp` (bank, insurance, real estate), or a title that looks outdated given `connecte_le`.",
+        "ignorer": "No reason to contact: student, intern, job seeker, retiree, recruiter or talent acquisition, HR, public sector or association, B2C shop or restaurant, a freelancer or coach selling their own services, another prospecting or lead generation agency (a competitor), or an empty title."
+      }
+    }
+  }
+}

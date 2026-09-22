@@ -1,0 +1,48 @@
+{
+  "slug": "creation-pub",
+  "titre": "Noter une création publicitaire : qualité, conformité, fatigue",
+  "description": "Chaque annonce (texte, description du visuel ou des plans d'une vidéo, plateforme, jours en ligne, fréquence, évolution du taux de clic) passe devant Jev qui rend trois notes de 0 à 3 : qualité du message, conformité aux règles de la plateforme et de la publicité en France, fatigue de la création. Les annonces à 3 en fatigue sont retirées ou déclinées, celles à 0 en conformité bloquées avant mise en ligne, sans visionner ni relire. Mesuré sur des vidéos concurrentes décrites plan par plan : 1,5 seconde par annonce, plus de 450 annonces en moins de 3 minutes. Les barèmes sont un exemple : adaptez-les à votre marque et à votre plateforme.",
+  "categorie": "marketing",
+  "colonnes": [
+    "plateforme",
+    "texte_annonce",
+    "description_visuel",
+    "jours_en_ligne",
+    "frequence",
+    "evolution_ctr"
+  ],
+  "seuil_confiance": 0.7,
+  "max_chars_par_colonne": 4000,
+  "questions": {
+    "qualite": {
+      "type": "score",
+      "instructions": "Rate the quality of this ad from `texte_annonce` and `description_visuel`: one clear promise, a concrete benefit or proof, a visible call to action, and a visual that matches the text.",
+      "criteria": [
+        "0, unusable: no readable promise, a text that says what the company is without what the reader gets, no call to action, or a visual unrelated to the text.",
+        "1, weak: a generic promise ('la solution qui simplifie votre quotidien'), jargon, no number and no proof, or a call to action buried at the end.",
+        "2, solid: a specific promise for a named audience, one concrete benefit or number, a clear call to action; the visual supports the text.",
+        "3, strong: a specific promise, a proof (number, client name, before and after), a single call to action, and a visual that shows the result or the product in use; nothing to cut."
+      ]
+    },
+    "conformite": {
+      "type": "score",
+      "instructions": "Rate how safely this ad can run on `plateforme` under the platform rules and French advertising law (Code de la consommation, ARPP): misleading or superlative claims without proof, comparisons naming a competitor, health or financial promises, targeting by a personal attribute, missing legal mentions for regulated offers (credit, alcohol, health), personal data collected without a stated purpose.",
+      "criteria": [
+        "0, blocking: a claim likely to be refused or sanctioned: guaranteed results, a medical or financial promise, a competitor named negatively, a fake urgency with a false countdown, an insult, or a regulated product with no legal mention.",
+        "1, risky: a superlative or absolute claim without proof ('le meilleur', 'numéro 1', 'résultats garantis'), a testimonial with no identifiable source, or a message that assumes a personal attribute of the reader ('vous êtes endetté ?').",
+        "2, minor fix: compliant overall but one element to adjust: a number without its source, a missing asterisk on a conditional offer, an unclear price, a logo used without permission.",
+        "3, compliant: factual claims with a source, no comparison, no personal attribute, legal mentions present where required."
+      ]
+    },
+    "fatigue": {
+      "type": "score",
+      "instructions": "Rate the wear of this creative from `jours_en_ligne` (days live), `frequence` (average number of times each person saw it) and `evolution_ctr` (change in click-through rate over the period). Higher means more worn out.",
+      "criteria": [
+        "0, fresh: live under 14 days, frequency under 2, click-through rate stable or rising.",
+        "1, early wear: live 14 to 30 days, or frequency between 2 and 3, with a click-through rate down by less than 20 percent.",
+        "2, tired: live 30 to 60 days, or frequency between 3 and 5, or a click-through rate down by 20 to 40 percent.",
+        "3, exhausted: live over 60 days, or frequency above 5, or a click-through rate down by more than 40 percent; replace the creative."
+      ]
+    }
+  }
+}

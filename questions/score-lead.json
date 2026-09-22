@@ -1,0 +1,30 @@
+{
+  "slug": "score-lead",
+  "titre": "Scorer un lead contre votre grille : chaud, tiède, froid",
+  "description": "Une fois la liste enrichie, chaque fiche passe devant Jev avec votre définition du bon client et il rend une note de 0 à 3 : les 3 partent en séquence prioritaire ou en appel, les 2 en séquence standard, les 0 et 1 sortent de la liste sans lecture. La grille ci-dessous est un exemple écrit pour un cabinet qui vend de la prospection externalisée aux PME B2B : réécrivez le bloc `icp` et les quatre niveaux pour votre offre.",
+  "categorie": "qualifier",
+  "colonnes": [
+    "titre_poste",
+    "entreprise",
+    "secteur",
+    "effectif",
+    "notes"
+  ],
+  "seuil_confiance": 0.7,
+  "max_chars_par_colonne": 3000,
+  "questions": {
+    "score": {
+      "type": "score",
+      "instructions": {
+        "icp": "We sell outsourced outbound prospecting to French B2B companies with 10 to 250 employees. The buyer is the founder, CEO, managing director, or the sales or marketing director. Good fit sectors: software, B2B services, industry, consulting, agencies. Bad fit: consumer brands, retail, public sector, associations, and any company that sells prospecting or lead generation itself.",
+        "question": "Using the `icp` block, rate how well this lead (`titre_poste` at `entreprise`, sector `secteur`, size `effectif`, extra facts in `notes`) matches our ideal customer and how ready they look to buy."
+      },
+      "criteria": [
+        "0, cold: outside the ICP on role or company: consumer business, public sector, fewer than 10 or more than 250 employees, a role with no say on sales (developer, accountant, intern, HR), or a company that sells prospecting or lead generation itself.",
+        "1, weak: fits on one axis only: right company size and sector but a non-decision role (project manager, marketing assistant, analyst), or a decision maker in a company outside the size or sector range.",
+        "2, warm: decision maker in a company inside the size and sector range, with nothing in `notes` showing an active sales project.",
+        "3, hot: decision maker inside the ICP and `notes` contain a live signal: hiring a first salesperson or an SDR, a new CRM or sequencer, a stated outbound or lead generation project, a public request for a prospecting provider, a recent fundraise for commercial growth."
+      ]
+    }
+  }
+}

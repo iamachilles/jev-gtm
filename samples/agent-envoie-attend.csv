@@ -1,0 +1,21 @@
+id,historique,brouillon,jours_depuis_dernier_message
+1,"Agent : Bonjour Julie, merci d'avoir accepté l'invitation. Je vous partage volontiers notre guide sur le coût réel d'un SDR interne si le sujet vous parle.
+Prospect : Oui volontiers, envoyez-le moi.","Le voici : https://forward-ai.fr/ressources/cout-sdr. Bonne lecture, dites-moi si une partie vous parle.",0
+2,"Agent : Bonjour Thomas, Groupe Aléa recrute deux commerciaux, je me suis dit que la prospection sortante devait être un sujet. On a écrit un guide dessus si ça vous intéresse.
+Prospect : Ça m'intéresse. Vous facturez comment, au rendez-vous ou au forfait ?","Nous fonctionnons au forfait mensuel, à partir de 2 500 € HT, sans engagement de durée.",0
+3,"Agent : Bonjour Sophie, félicitations pour votre arrivée chez Vertigo. Curieux de savoir comment vous abordez la prospection des logisticiens allemands.
+Agent : Je me permets une relance, mon message a peut-être été noyé.","Dernière relance de ma part : si le sujet vous intéresse, je vous envoie notre guide, sinon je vous laisse tranquille.",2
+4,"Agent : Bonjour Karim, ...
+Prospect : Merci, mais je pars trois semaines en congé demain, on en reparle à mon retour.","Bonjour Karim, j'espère que les vacances ont été bonnes. Je reviens vers vous comme convenu.",5
+5,"Agent : Bonjour Marc, je vous écris parce que Corvus Avocats cherchait un prestataire pour prospecter les directions juridiques.
+Prospect : Arrêtez de m'écrire, je ne suis pas intéressé et je n'apprécie pas ces messages automatiques.","Je comprends, je ne vous écrirai plus. Bonne continuation.",0
+6,"Agent : Bonjour Élise, ...
+Prospect : Ça tombe bien, on cherche justement. On peut se voir mardi 14 h ou jeudi 10 h ?","Mardi 14 h me convient, je vous envoie une invitation.",0
+7,"Agent : Bonjour Nadia, Bellune Textile vient de racheter Mistral, je me suis dit que réconcilier deux fichiers clients avant de prospecter le Sud devait être d'actualité. On a un guide dessus.","Bonjour Nadia, je me permets une relance, mon message a pu passer entre deux réunions. Le guide est toujours disponible si le sujet vous parle.",5
+8,"Agent : Bonjour Paul, ...
+Agent : Je me permets une relance.
+Agent : Dernière relance de ma part, je ne voudrais pas insister.","Bonjour Paul, une troisième et vraie dernière relance, au cas où.",7
+9,"Agent : Bonjour Laura, Lumen Énergie a changé de CRM en juin, je me suis dit que la prospection devait être en chantier. On a un guide dessus.
+Prospect : Hi, thanks for reaching out. Could you tell me in two lines what Forward actually does?","Sure. Forward runs the first part of your outbound for you: we build the list, write the messages and hand you the replies that deserve a call. Happy to share the guide if useful.",0
+10,"Agent : Bonjour Romain, Martin Technologies recrute deux SDR, on a écrit un guide sur leurs six premiers mois si ça vous intéresse.
+Prospect : Merci ! C'est quoi la différence avec ce que fait une agence de prospection classique ?","Bonne question. Une agence classique met des humains sur vos listes ; nous mettons des agents qui tournent tous les jours et un humain qui relit ce qui sort. Je vous envoie le guide, il détaille le fonctionnement.",0

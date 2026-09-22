@@ -1,0 +1,25 @@
+{
+  "slug": "urgence-relance",
+  "titre": "Noter l'urgence de relance de chaque ligne d'un tableau",
+  "description": "Le tableau des conversations en cours (CRM, feuille de suivi, boîte de réception) passe devant Jev ligne par ligne, avec l'étape, le dernier échange et le nombre de jours écoulés ; il rend une note d'urgence de 0 à 3. Le tri sur cette note donne la liste des relances du jour, les 3 en tête, les 0 hors de vue. Les délais de la grille sont ceux d'un cycle de vente court (services aux PME) : ajustez-les à votre cycle.",
+  "categorie": "prioriser",
+  "colonnes": [
+    "etape",
+    "dernier_echange",
+    "jours_depuis"
+  ],
+  "seuil_confiance": 0.7,
+  "max_chars_par_colonne": 3000,
+  "questions": {
+    "urgence": {
+      "type": "score",
+      "instructions": "Rate how urgently we should follow up on this conversation. `etape` is the pipeline stage, `dernier_echange` summarizes the last exchange and who wrote last, `jours_depuis` is the number of days since that exchange.",
+      "criteria": [
+        "0, none: the deal is closed (won or lost), the contact asked to stop or said a clear no, or they set a date to come back that has not arrived yet.",
+        "1, low: the last message is ours and was sent fewer than 5 days ago, the contact is lukewarm, or the last exchange is an out of office; waiting is fine.",
+        "2, medium: the contact showed interest and has been silent for 5 to 15 days, a proposal or a document we sent has no answer after a week, or the contact said 'let me think' with no date.",
+        "3, high: we owe the contact something (a proposal, a call slot, a document, an answer to a question) and it is still pending; a hot contact has been silent for more than 15 days; a meeting or a deadline falls within the next few days and is unconfirmed."
+      ]
+    }
+  }
+}

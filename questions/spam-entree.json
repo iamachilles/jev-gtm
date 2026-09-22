@@ -1,0 +1,23 @@
+{
+  "slug": "spam-entree",
+  "titre": "Filtrer le spam et les faux leads à l'entrée",
+  "description": "Chaque soumission du formulaire de contact passe devant Jev avant d'entrer dans le CRM ou d'alerter un commercial. Jev reçoit le nom, l'email, l'entreprise et le message, et rend la probabilité que la demande soit réelle. Les réelles créent un contact et une notification, les fausses sont archivées, les incertaines vont dans une file de relecture.",
+  "categorie": "nettoyer",
+  "colonnes": [
+    "nom",
+    "email",
+    "entreprise",
+    "message"
+  ],
+  "seuil_confiance": 0.7,
+  "questions": {
+    "est_reel": {
+      "type": "noul",
+      "instructions": "This is a submission from the contact form of a B2B service company. Is it a genuine request from a potential client? Judge the four fields together: a plausible name, an email domain consistent with the company, and a message that asks something of us rather than selling to us.",
+      "criteria": {
+        "true": "A real person at a real company asking something we could answer: a need, a question about the offer, a quote, a meeting, a callback. Short messages count as real when the name, email and company are coherent ('Un devis svp' from t.lefevre@bellune-textile.fr).",
+        "false": "Spam or a fake lead: random or repeated characters ('asdf', 'test test'), a message that sells something to us (SEO, backlinks, web design, crypto, guest posts), a link with no request, an email that contradicts the company or looks disposable ('qwerty123@mail.ru', 'info@' from an unrelated domain), an obvious bot pattern (same string for name, company and message), or a message in a language unrelated to the site with no request we could answer."
+      }
+    }
+  }
+}

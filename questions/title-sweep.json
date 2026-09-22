@@ -2,8 +2,12 @@
   "slug": "title-sweep",
   "titre": "Title Sweep : noter tous les intitulés d'un compte cible de 1 à 5",
   "description": "La méthode de Jordan Crawford (Blueprint GTM) : au lieu de chercher des titres par mot-clé, on fait noter par Jev la totalité des intitulés d'un compte cible avec les règles d'achat de votre offre. 5 tient le problème, 4 exécute, 3 est le service voisin, 2 le reste, 1 le service à exclure. Sur un compte de 79 601 personnes, Jordan l'a fait tourner pour 9,47 $. Les règles d'achat ci-dessous sont un exemple (un outil de veille sur les décisions des collectivités) : réécrivez-les à partir de vos propres appels commerciaux.",
-  "etape_gtm": "ciblage",
-  "colonnes": ["job_title", "department", "still_at_company"],
+  "categorie": "cibler",
+  "colonnes": [
+    "job_title",
+    "department",
+    "still_at_company"
+  ],
   "seuil_confiance": 0.6,
   "questions": {
     "niveau": {

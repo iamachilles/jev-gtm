@@ -1,0 +1,32 @@
+{
+  "slug": "angle-message",
+  "titre": "Choisir l'angle ou la séquence adaptés à chaque prospect",
+  "description": "Avant d'écrire, on décide. Jev lit ce qu'on sait du prospect (poste, entreprise, secteur, effectif, signal, notes) et choisit l'angle d'approche parmi les vôtres ; la rédaction du message, sur les seules lignes retenues, revient ensuite à un LLM ou à un humain. Environ 200 tokens par lead avec le brief : 8 $ le million de leads. Les angles ci-dessous sont un exemple (un cabinet de prospection externalisée pour PME B2B) : remplacez-les par les vôtres, un angle par situation observable.",
+  "categorie": "message",
+  "colonnes": [
+    "poste",
+    "entreprise",
+    "secteur",
+    "effectif",
+    "signal",
+    "notes"
+  ],
+  "seuil_confiance": 0.7,
+  "questions": {
+    "angle": {
+      "type": "choice",
+      "instructions": {
+        "offer": "We sell outsourced outbound prospecting (booked meetings) to French B2B SMEs. Each angle below is a sequence we already wrote; the choice depends on the most recent observable fact about the prospect, not on their sector.",
+        "question": "Given `offer`, which angle fits this prospect best, judging from `signal` and `notes` first, then `poste`, `entreprise`, `secteur` and `effectif`? When two angles apply, take the one tied to the most recent dated fact. Choose 'standard' when nothing specific is known."
+      },
+      "criteria": {
+        "recrutement_commercial": "The company is hiring or just hired a sales person (SDR, business developer, commercial, head of sales): the angle is meetings from day one while the hire ramps up.",
+        "levee_de_fonds": "The company announced a fundraise, a grant or a new investor in the last six months: the angle is turning the new budget into pipeline fast.",
+        "dirigeant_seul_a_vendre": "The founder or CEO does the selling personally and there is no sales team: the angle is giving the founder their time back.",
+        "nouveau_marche": "The company opens a new territory, country, segment or product line: the angle is prospecting the new market without staffing it.",
+        "outillage_absent": "The notes say there is no CRM, no sequencing tool or no prospecting process: the angle is a turnkey machine, tooling included.",
+        "standard": "No specific fact is known, or the facts are older than six months: the generic sequence."
+      }
+    }
+  }
+}

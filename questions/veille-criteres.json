@@ -1,0 +1,26 @@
+{
+  "slug": "veille-criteres",
+  "titre": "Faire lire une veille (presse, concurrents) contre vos critères",
+  "description": "Une veille (alertes Google, flux presse, lettres sectorielles, pages actualités des concurrents) tombe par dizaines chaque jour et personne ne la lit. Jev reçoit le titre et le résumé de chaque actualité avec vos critères et dit si elle compte pour vous. Les critères ci-dessous sont un exemple pour un cabinet qui vend de la prospection externalisée aux PME B2B : à réécrire dans `watch_criteria`. Les oui vont dans un canal Slack ou une liste de comptes à travailler, le reste est jeté sans lecture.",
+  "categorie": "signaux",
+  "colonnes": [
+    "source",
+    "titre_actualite",
+    "resume"
+  ],
+  "seuil_confiance": 0.6,
+  "max_chars_par_colonne": 3000,
+  "questions": {
+    "compte_pour_moi": {
+      "type": "noul",
+      "instructions": {
+        "watch_criteria": "We sell outsourced prospecting to French B2B SMEs. We care about news where a French company of roughly 10 to 250 employees is about to grow its sales effort: a fundraise, a new market or a new country, a new sales leader, a new product launched for businesses, a CRM or sales tooling change, an acquisition of a smaller company. We also care about news about our direct competitors (outsourced SDR agencies, lead generation agencies) winning or losing clients. We do not care about consumer brands, public sector, large groups' quarterly results, macroeconomic news, awards and rankings, CSR announcements, or events without a company behind them.",
+        "question": "Given `watch_criteria`, does this news item (`titre_actualite` and `resume`, published by `source`) matter to us?"
+      },
+      "criteria": {
+        "true": "The item names a company that fits the criteria and describes an event listed as relevant, or it is news about a direct competitor.",
+        "false": "The item is about a consumer brand, a public body, a large group's financials, the economy in general, an award, a CSR or HR announcement, or an event with no identifiable company behind it."
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "slug": "notes-de-vente",
+  "titre": "Extraire d'une note de vente l'intention, l'urgence et l'intérêt produit",
+  "description": "Les notes d'appel et les commentaires laissés dans le CRM restent du texte libre que personne ne relit. Jev lit chaque note et répond à trois questions fermées d'un coup : le prospect a une intention d'achat, il y a une urgence datée, il s'est intéressé au produit lui-même. Trois colonnes oui / non avec leur probabilité, pour construire une vue du pipeline sans demander aux commerciaux de remplir un champ de plus.",
+  "categorie": "signaux",
+  "colonnes": [
+    "entreprise",
+    "note"
+  ],
+  "seuil_confiance": 0.6,
+  "max_chars_par_colonne": 4000,
+  "questions": {
+    "intention_achat": {
+      "type": "noul",
+      "instructions": "The `note` was written by a salesperson after a call or a meeting with `entreprise`. Does the note show that the prospect intends to buy or to change something (a project, a budget, a decision under way, a request for a quote), rather than gathering information or being polite?",
+      "criteria": {
+        "true": "The prospect states a project, a budget, a decision process, a comparison of providers, a request for a proposal or a quote, or a next step they own ('budget validé en CODIR', 'ils veulent une proposition', 'décision au prochain comité').",
+        "false": "The prospect only listens, asks general questions, says it is too early, has no project, or the note reports no reaction from the prospect."
+      }
+    },
+    "urgence": {
+      "type": "noul",
+      "instructions": "Does the note contain a deadline, a date or an event that forces a decision soon (within about three months), or a pain that costs the prospect something right now?",
+      "criteria": {
+        "true": "A stated date or event ('avant fin décembre', 'contrat actuel se termine en janvier', 'salon en novembre', 'le commercial part le mois prochain'), or a loss happening now (missed leads, unstaffed territory, lost tenders, penalties).",
+        "false": "No date, a vague horizon ('un jour', 'l'an prochain peut-être', 'à voir'), or a comfortable situation with a current provider."
+      }
+    },
+    "interet_produit": {
+      "type": "noul",
+      "instructions": "Did the prospect show interest in the product or service itself: asking about features, pricing, integrations, references, a demo, a trial or the way it works?",
+      "criteria": {
+        "true": "The note records questions or requests about the offer: price, how it works, integrations (CRM, tools), references, demo, trial, contract terms, or a positive reaction to a specific feature.",
+        "false": "The conversation stayed on the prospect's situation or on generalities, the prospect asked nothing about the offer, or reacted with doubt only."
+      }
+    }
+  }
+}

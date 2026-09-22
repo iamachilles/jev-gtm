@@ -1,0 +1,67 @@
+{
+  "slug": "acheteur-cinq-questions",
+  "titre": "Confirmer qui est vraiment l'acheteur avec cinq questions par profil",
+  "description": "Après un title sweep, Jev relit le profil complet de chaque personne retenue et répond à cinq questions fermées d'un coup : elle tient le problème, elle peut signer, elle utiliserait le service au quotidien, son poste actuel confirme l'intitulé stocké, elle appartient à un service exclu. La liste à appeler regroupe les profils qui tiennent le problème, peuvent signer, sont confirmés en poste et n'appartiennent pas à un service exclu ; la question sur l'usage quotidien donne la seconde liste, celle des utilisateurs à associer. C'est la troisième lecture de Jordan Crawford (Blueprint GTM) : 1 084 personnes acceptées par cinq questions sur un compte de 79 601. Les règles d'achat sont un exemple (un cabinet de prospection externalisée pour PME B2B) : à réécrire pour votre offre.",
+  "categorie": "qualifier",
+  "colonnes": [
+    "entreprise_cible",
+    "job_title",
+    "linkedin_headline",
+    "about",
+    "poste_actuel",
+    "postes_passes"
+  ],
+  "seuil_confiance": 0.6,
+  "max_chars_par_colonne": 3000,
+  "questions": {
+    "tient_le_probleme": {
+      "type": "noul",
+      "instructions": {
+        "buying_rules": "We sell outsourced outbound prospecting (booked meetings) to French B2B SMEs. The problem owner answers for new business revenue: founder or CEO of a company under 250 people, Directeur commercial, Head of Sales, CRO, VP Sales, or a business unit or agency director with a revenue target. Daily users take the booked meetings: account executives, sales reps, business developers, SDRs, sales ops. Finance, accounting, legal, HR, IT and procurement are excluded.",
+        "question": "Given `buying_rules`, does this person own the problem we solve, judging from `job_title`, `linkedin_headline`, `about` and `poste_actuel`?"
+      },
+      "criteria": {
+        "true": "The person answers for new business revenue or the sales pipeline: founder, CEO, Président, Directeur général of an SME, Directeur commercial, Head of Sales, CRO, VP Sales, Directeur du développement, an agency or business unit director with a revenue target, or a marketing lead explicitly in charge of lead generation.",
+        "false": "The person works in another function (product, operations, finance, HR, engineering, support, legal, claims) or executes sales without owning the target (sales rep, SDR, account manager, chargé de clientèle)."
+      }
+    },
+    "peut_signer": {
+      "type": "noul",
+      "instructions": "Can this person sign or sponsor the purchase of an outsourced prospecting service, judging from the level shown in `job_title`, `linkedin_headline` and `poste_actuel`?",
+      "criteria": {
+        "true": "Founder, co-founder, owner, CEO, Président, Directeur général, any C-level, VP, Directeur, Head of, Managing Partner, Associé, or a site, agency or business unit director.",
+        "false": "Responsable or manager without a department budget, team lead, individual contributor, consultant, assistant, intern, or a level that cannot be read from the text."
+      }
+    },
+    "utilise_au_quotidien": {
+      "type": "noul",
+      "instructions": {
+        "buying_rules": "We sell outsourced outbound prospecting (booked meetings) to French B2B SMEs. The problem owner answers for new business revenue: founder or CEO of a company under 250 people, Directeur commercial, Head of Sales, CRO, VP Sales, or a business unit or agency director with a revenue target. Daily users take the booked meetings: account executives, sales reps, business developers, SDRs, sales ops. Finance, accounting, legal, HR, IT and procurement are excluded.",
+        "question": "Given `buying_rules`, would this person use the service day to day (take the booked meetings, work the leads), judging from the whole profile?"
+      },
+      "criteria": {
+        "true": "Account executive, sales rep, commercial, business developer, SDR, BDR, ingénieur d'affaires, key account manager, sales ops, or a founder or sales director whose `about` says they still sell or follow clients personally.",
+        "false": "A role that never takes a sales meeting: finance, HR, legal, IT, product, engineering, support, claims, marketing without a sales duty, or an executive whose text shows no personal selling."
+      }
+    },
+    "poste_confirme": {
+      "type": "noul",
+      "instructions": "Does `poste_actuel` (the current position on the LinkedIn profile) confirm that this person holds `job_title` at `entreprise_cible` today? A different employer, a role listed only in `postes_passes`, an end date, or a headline announcing a new job elsewhere means no.",
+      "criteria": {
+        "true": "The current position names `entreprise_cible` (or its brand) and a role equivalent to `job_title`, with no end date.",
+        "false": "The current position is at another company, the role at `entreprise_cible` appears only among past positions or carries an end date, or the headline says 'ex-', 'freelance', 'open to work' or names a new employer."
+      }
+    },
+    "service_exclu": {
+      "type": "noul",
+      "instructions": {
+        "buying_rules": "We sell outsourced outbound prospecting (booked meetings) to French B2B SMEs. The problem owner answers for new business revenue: founder or CEO of a company under 250 people, Directeur commercial, Head of Sales, CRO, VP Sales, or a business unit or agency director with a revenue target. Daily users take the booked meetings: account executives, sales reps, business developers, SDRs, sales ops. Finance, accounting, legal, HR, IT and procurement are excluded.",
+        "question": "Given `buying_rules`, does this person belong to an excluded department?"
+      },
+      "criteria": {
+        "true": "Finance, accounting, comptabilité, contrôle de gestion, DAF, legal, juridique, HR, ressources humaines, recrutement, IT, DSI, systèmes d'information, procurement, achats, payroll, tax.",
+        "false": "Any other department, including sales, marketing, general management, operations, product, engineering, customer success, claims."
+      }
+    }
+  }
+}

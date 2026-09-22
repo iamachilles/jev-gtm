@@ -1,0 +1,25 @@
+{
+  "slug": "maturite-demande",
+  "titre": "Noter la maturité d'achat d'une demande entrante",
+  "description": "Chaque demande entrante (formulaire de contact, email, message LinkedIn) passe devant Jev avec le poste et l'entreprise de l'émetteur. Jev rend une note de 0 à 3 : les 3 sont rappelés dans l'heure, les 2 reçoivent une proposition de créneau, les 1 une ressource et une relance à 30 jours, les 0 une réponse automatique. La grille vaut pour une offre de service B2B classique ; adaptez les exemples entre guillemets à votre offre.",
+  "categorie": "reponses",
+  "colonnes": [
+    "source",
+    "poste",
+    "entreprise",
+    "message"
+  ],
+  "seuil_confiance": 0.7,
+  "questions": {
+    "maturite": {
+      "type": "score",
+      "instructions": "Rate the buying maturity of this inbound request. `message` is what the person wrote, `poste` and `entreprise` who they are, `source` where it came from. Judge from the words: a stated need, a timeline, a budget, a comparison in progress, a request for a quote or a start date.",
+      "criteria": [
+        "0, curiosity or no lead: general information request, student or job seeker, a supplier pitching its own services, a request for content (guide, newsletter, webinar replay), or a message with no need at all.",
+        "1, exploring: a real need is named but without timeline, budget or decision power ('we might look at this next year', 'just comparing what exists', 'my manager asked me to gather information').",
+        "2, evaluating: a defined need with a timeline or an active comparison ('we are choosing between two providers', 'we want to start in January', asks for pricing, a demo or a case study).",
+        "3, ready: a decision maker with a stated budget or deadline who asks for a proposal, a contract, availability or a start date ('send the quote', 'when can you start', 'the budget is approved')."
+      ]
+    }
+  }
+}

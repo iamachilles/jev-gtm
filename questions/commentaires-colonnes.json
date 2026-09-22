@@ -1,8 +1,8 @@
 {
-  "slug": "commentaires-audience",
+  "slug": "commentaires-colonnes",
   "titre": "Transformer des commentaires LinkedIn en colonnes",
   "description": "Pour profiler l'audience d'un post (le vôtre ou celui d'un tiers), Jev lit chaque commentaire avec le titre de son auteur et répond à trois questions fermées d'un coup : la personne parle d'un projet, elle est décideuse, elle demande la ressource (le mot-clé du post est donné dans la question, à remplacer par le vôtre). Trois colonnes oui / non avec leur probabilité, prêtes pour un tableau croisé.",
-  "etape_gtm": "audience",
+  "categorie": "audience",
   "colonnes": [
     "auteur_headline",
     "commentaire"

@@ -1,0 +1,23 @@
+{
+  "slug": "terme-recherche-acheteur",
+  "titre": "Dire si un terme de recherche Google Ads vient d'un acheteur",
+  "description": "Le rapport des termes de recherche d'un compte Google Ads passe devant Jev, un terme par ligne, avec la description de l'offre. Jev rend la probabilité que la personne derrière le terme cherche à acheter ce type de produit, plutôt qu'une définition, un modèle gratuit ou un emploi. Les « non » alimentent la liste des mots-clés à exclure, les « oui » sûrs servent à repérer les requêtes à renforcer. L'offre décrite dans `offer` est un exemple : à réécrire pour la vôtre.",
+  "categorie": "marketing",
+  "colonnes": [
+    "terme"
+  ],
+  "seuil_confiance": 0.7,
+  "questions": {
+    "acheteur": {
+      "type": "noul",
+      "instructions": {
+        "offer": "We sell an expense report software (notes de frais) to French SMEs, priced per user per month, with a free trial.",
+        "question": "Given `offer`, was the Google search `terme` typed by someone looking to buy or evaluate this kind of software for their company? Judge from the words: product category, competitor names, price, comparison and business qualifiers point to a buyer; definitions, rules, free templates, how-tos, jobs and personal use do not."
+      },
+      "criteria": {
+        "true": "The term names the product category with a buying or evaluating intent: 'logiciel notes de frais pme', 'meilleur logiciel notes de frais comparatif', 'notes de frais application entreprise', 'expensya tarif', 'n2f avis', 'solution notes de frais prix', 'essai gratuit logiciel notes de frais'.",
+        "false": "The term seeks information, a rule, a template or something unrelated to buying the software: 'note de frais définition', 'barème kilométrique 2026', 'modèle note de frais excel gratuit', 'comment faire une note de frais', 'emploi comptable notes de frais', 'notes de frais urssaf', 'remboursement note de frais délai', or a term about another product entirely."
+      }
+    }
+  }
+}

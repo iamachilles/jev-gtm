@@ -1,0 +1,28 @@
+{
+  "slug": "ordre-appels",
+  "titre": "Ordonner les leads à appeler en premier",
+  "description": "Le matin, la liste d'appels du jour passe devant Jev avec la fiche de chaque lead et son historique daté. Jev rend une priorité de 1 à 5 et le commercial appelle dans l'ordre des 5 puis des 4 ; le reste attend ou repasse en séquence. La grille est un exemple pour une équipe qui vend un service B2B : à réécrire selon vos délais et vos étapes.",
+  "categorie": "prioriser",
+  "colonnes": [
+    "poste",
+    "entreprise",
+    "source",
+    "historique"
+  ],
+  "seuil_confiance": 0.7,
+  "max_chars_par_colonne": 4000,
+  "questions": {
+    "priorite": {
+      "type": "score",
+      "_base": 1,
+      "instructions": "Rate how urgently this lead should be called today. `historique` lists dated interactions (emails, opens, replies, calls, meetings), most recent last. Today is 2026-09-22. `poste` and `entreprise` tell who the person is, `source` where the lead came from.",
+      "criteria": [
+        "1, park: the lead said no, asked to be contacted after next quarter, or three or more attempts in the last 60 days got no reaction at all.",
+        "2, cold: an inbound content download, an event badge or an outbound lead with one or two attempts and no reply, no open, no click.",
+        "3, warm: opened or clicked in the last 14 days, replied once without committing, or a referral or a new inbound not yet contacted.",
+        "4, hot: replied with interest, asked about price, scope or timing, or requested a demo or a call that has not been booked yet.",
+        "5, call now: asked to be called, a meeting to confirm today, a proposal sent with a decision expected within 7 days, or a decision maker who replied in the last 48 hours."
+      ]
+    }
+  }
+}

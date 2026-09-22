@@ -1,0 +1,25 @@
+{
+  "slug": "fils-repondre",
+  "titre": "Choisir les fils de discussion où répondre maintenant",
+  "description": "Sous un post qui marche, les commentaires arrivent par dizaines et on ne peut pas répondre à tous avec soin. Jev lit chaque fil (le commentaire, ses réponses éventuelles, le titre de l'auteur) et note l'intérêt à y répondre maintenant, de 0 à 3. Les 3 sont traités à la main dans l'heure, les 2 dans la journée, les 1 reçoivent un remerciement, les 0 sont ignorés. La grille est écrite pour un auteur qui vend de la prospection externalisée aux dirigeants de PME B2B : à réécrire pour votre cible.",
+  "categorie": "audience",
+  "colonnes": [
+    "post_sujet",
+    "auteur_headline",
+    "fil"
+  ],
+  "seuil_confiance": 0.7,
+  "max_chars_par_colonne": 3000,
+  "questions": {
+    "interet": {
+      "type": "score",
+      "instructions": "`post_sujet` is the topic of our LinkedIn post, `auteur_headline` the headline of the person who commented, and `fil` the thread: the comment, followed by any replies (ours are prefixed 'Nous :'). Rate how much it is worth replying to this thread right now. Our target readers are founders, CEOs and sales directors of B2B SMEs; providers, coaches, consultants and students are not targets.",
+      "criteria": [
+        "0, ignore: spam, self-promotion, an emoji or a one-word reaction, an off-topic remark, or a thread already closed by our reply and acknowledged by the author.",
+        "1, thank: generic praise or agreement, a tag of someone else, or a question already answered in the thread, from a person who is not a target.",
+        "2, reply today: a target reader gives an opinion, shares an experience or asks a general question that our answer could turn into a conversation, or a non-target asks a precise question that other readers will read.",
+        "3, reply now: a target reader describes their own situation or problem, asks us a direct question, disagrees with an argument, or asks how to work with us, and the thread is still open on their last message."
+      ]
+    }
+  }
+}

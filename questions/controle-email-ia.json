@@ -1,0 +1,25 @@
+{
+  "slug": "controle-email-ia",
+  "titre": "Contrôler un email rédigé par une IA avant envoi",
+  "description": "Quand un agent rédige les emails de prospection, chaque brouillon passe devant Jev avec le contexte donné à l'agent et les règles de la maison. Jev dit si l'email part tel quel ou s'il revient à un humain : fait inventé, variable non remplie, formule interdite, longueur, ton. Les règles ci-dessous sont un exemple, à remplacer par les vôtres.",
+  "categorie": "message",
+  "colonnes": [
+    "contexte",
+    "email"
+  ],
+  "seuil_confiance": 0.7,
+  "max_chars_par_colonne": 4000,
+  "questions": {
+    "bon_a_envoyer": {
+      "type": "noul",
+      "instructions": {
+        "rules": "1. Every fact about the prospect (name, company, role, event, figure, source) must appear in `contexte`; nothing invented. 2. No unfilled placeholder ('{{prenom}}', '[Entreprise]', 'XXX'). 3. At most 120 words and one single call to action. 4. Formal address (vouvoiement) in French, no English sentence. 5. No opener that reveals the targeting ('je vous ai trouvé'), no flattery, no exclamation mark, no superlative about our offer. 6. No long dash, no emoji, no bullet list.",
+        "question": "`contexte` is what the AI knew about the prospect and the brief it received; `email` is the draft it wrote. Does the email respect every rule in `rules`, so that it can be sent as is?"
+      },
+      "criteria": {
+        "true": "Every rule holds: all facts in the email are present in `contexte`, no placeholder, 120 words or fewer, one call to action, vouvoiement, sober tone, no long dash, no emoji, no list.",
+        "false": "At least one rule is broken: a fact, figure, name or source absent from `contexte`, a placeholder left, more than 120 words or two calls to action, tutoiement or English, flattery, an exclamation mark, a superlative, a long dash, an emoji or a bullet list."
+      }
+    }
+  }
+}

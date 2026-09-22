@@ -2,10 +2,27 @@
   "slug": "meme-societe",
   "titre": "Fiche SIRENE et profil LinkedIn : la même société ?",
   "description": "Pour joindre une base d'entreprises publique (SIRENE) à des comptes LinkedIn sans clé commune, Jev compare les deux fiches et dit si elles parlent de la même société. Sert au dédoublonnage et au rattachement d'un contact à son entreprise.",
-  "etape_gtm": "dedoublonnage",
+  "categorie": "nettoyer",
   "colonnes": [
-    {"cle": "sirene", "colonnes": ["sirene_denomination", "sirene_activite", "sirene_commune", "sirene_effectif"]},
-    {"cle": "linkedin", "colonnes": ["linkedin_company_name", "linkedin_industry", "linkedin_location", "linkedin_headcount", "linkedin_description"]}
+    {
+      "cle": "sirene",
+      "colonnes": [
+        "sirene_denomination",
+        "sirene_activite",
+        "sirene_commune",
+        "sirene_effectif"
+      ]
+    },
+    {
+      "cle": "linkedin",
+      "colonnes": [
+        "linkedin_company_name",
+        "linkedin_industry",
+        "linkedin_location",
+        "linkedin_headcount",
+        "linkedin_description"
+      ]
+    }
   ],
   "seuil_confiance": 0.7,
   "questions": {

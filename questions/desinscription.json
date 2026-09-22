@@ -1,0 +1,21 @@
+{
+  "slug": "desinscription",
+  "titre": "Détecter une demande d'arrêt ou de désinscription dans une conversation",
+  "description": "Dans une séquence ou une conversation menée par un agent, Jev lit le dernier message reçu et dit si la personne demande qu'on arrête de la contacter. Un oui sûr coupe la séquence et ajoute le contact à la liste d'exclusion sans passer par un LLM ; un refus poli sans demande d'arrêt reste un simple « pas intéressé » que le tri des réponses traitera. Les cas sous le seuil vont à un humain, car un stop manqué coûte plus cher qu'une relecture.",
+  "categorie": "reponses",
+  "colonnes": [
+    "dernier_message"
+  ],
+  "seuil_confiance": 0.6,
+  "max_chars_par_colonne": 2000,
+  "questions": {
+    "veut_arreter": {
+      "type": "noul",
+      "instructions": "`dernier_message` is the latest reply received from a prospect in an automated email or LinkedIn sequence. Does the person ask to stop being contacted? Declining the offer is not enough: look for a request to stop, to be removed from a list, or a complaint about the messages themselves.",
+      "criteria": {
+        "true": "The person asks to stop: 'STOP', 'désabonnez-moi', 'ne me contactez plus', 'retirez-moi de votre liste', 'arrêtez vos relances', a complaint about the number of messages received, a mention of RGPD, spam or legal action, or a demand to delete their data.",
+        "false": "The person declines, defers, asks a question, redirects to a colleague, says they left the company, or an automatic reply: 'pas intéressé', 'revenez en janvier', 'voyez avec Thomas', out of office."
+      }
+    }
+  }
+}

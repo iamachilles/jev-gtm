@@ -1,0 +1,29 @@
+{
+  "slug": "envoyer-creuser-abandonner",
+  "titre": "Décider pour chaque compte : envoyer, creuser ou abandonner",
+  "description": "Une fois le compte scoré, il reste une décision par ligne : on lance la séquence, on cherche encore, ou on laisse tomber. Jev lit la fiche (secteur, taille, score de fit, contact identifié, signal récent) et choisit. Les « envoyer » partent en campagne, les « creuser » vont à un agent ou à un humain pour compléter, les « abandonner » sortent de la liste. Attention au biais mesuré sur ce cas : sur une marque, Jev a écarté 40 % des contacts qu'un modèle de référence marquait « envoyer », donc relisez les abandons sous le seuil. Les règles ci-dessous sont un exemple (un cabinet de prospection externalisée pour PME B2B) : à réécrire pour votre offre.",
+  "categorie": "prioriser",
+  "colonnes": [
+    "entreprise",
+    "secteur",
+    "effectif",
+    "score_fit",
+    "contact_identifie",
+    "signal_recent"
+  ],
+  "seuil_confiance": 0.7,
+  "questions": {
+    "decision": {
+      "type": "choice",
+      "instructions": {
+        "rules": "We send outbound sequences to French B2B companies with 10 to 250 employees. `score_fit` is a 0 to 3 fit score from an earlier step (3 = strong fit). `contact_identifie` is the decision maker found so far, or 'aucun'. `signal_recent` is the latest buying signal found, or 'aucun'. A sequence needs a named decision maker; a signal is a bonus, not a requirement.",
+        "question": "Given `rules`, what do we do with this account now?"
+      },
+      "criteria": {
+        "envoyer": "Ready to send: `score_fit` is 2 or 3, a decision maker is named in `contact_identifie`, and `effectif` is inside the target. A recent signal makes it a priority send.",
+        "creuser": "Worth more work before sending: `score_fit` is 2 or 3 but `contact_identifie` is 'aucun' or a non-decision maker (a switchboard, an assistant, HR), or `effectif` is unknown or borderline, or the signal contradicts the score and needs a check.",
+        "abandonner": "Not worth sending or searching: `score_fit` is 0 or 1, `effectif` is under 10 or over 250, the sector sells to consumers or is public, or the signal says the need is already covered (a provider just signed, an in-house team just hired)."
+      }
+    }
+  }
+}

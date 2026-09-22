@@ -1,0 +1,22 @@
+{
+  "slug": "reponse-automatique",
+  "titre": "Détecter une réponse automatique (absence, bounce)",
+  "description": "Première étape du tri des réponses : avant de classer une réponse ou de la confier à un agent, Jev dit si elle a été produite par une machine (message d'absence, échec de livraison, accusé de réception, notification). Les automatiques sortent du flux sans lecture, et une absence datée peut programmer une relance ; le reste part vers le tri ou vers un humain.",
+  "categorie": "reponses",
+  "colonnes": [
+    "objet",
+    "reponse"
+  ],
+  "seuil_confiance": 0.9,
+  "max_chars_par_colonne": 2000,
+  "questions": {
+    "automatique": {
+      "type": "noul",
+      "instructions": "`objet` is the subject line and `reponse` the body of a reply received after a cold email. Was this reply generated automatically by a mail system or an autoresponder, rather than written by the person in reaction to our message?",
+      "criteria": {
+        "true": "Out of office or absence notice ('absente jusqu'au', 'Automatic reply', 'Réponse automatique'), delivery failure or bounce ('Undeliverable', 'Mail delivery failed', 'adresse inexistante'), a ticket or receipt acknowledgement ('votre demande a bien été reçue', a ticket number), a 'no longer works here' template, a mailbox full notice, or any message that addresses nobody and could be sent to anyone.",
+        "false": "A reply written by a human to our message, even short, negative or off topic: it reacts to what we wrote, names our offer, asks something, or signs personally."
+      }
+    }
+  }
+}

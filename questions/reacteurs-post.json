@@ -1,0 +1,26 @@
+{
+  "slug": "reacteurs-post",
+  "titre": "Classer les réacteurs d'un post : acheteur, pair, vendeur, recruteur",
+  "description": "Pour savoir qui lit vraiment vos posts (ou ceux d'un créateur dont vous visez l'audience), Jev lit le titre LinkedIn de chaque personne qui a réagi et la range dans un profil : acheteur potentiel, pair qui fait le même métier, vendeur qui cherche à vous vendre quelque chose, recruteur, autre. La part d'acheteurs dit si le contenu touche la cible ; la liste des acheteurs alimente la prospection. La définition de l'acheteur dépend de votre offre : celle-ci est un exemple (un cabinet qui vend de la prospection externalisée aux dirigeants de PME B2B), à réécrire.",
+  "categorie": "audience",
+  "colonnes": [
+    "linkedin_headline"
+  ],
+  "seuil_confiance": 0.8,
+  "questions": {
+    "profil": {
+      "type": "choice",
+      "instructions": {
+        "author_offer": "The post author runs a firm that sells outsourced outbound prospecting to founders and sales leaders of French B2B SMEs (10 to 250 employees).",
+        "question": "Given `author_offer`, classify the person who reacted to the post by their `linkedin_headline`. When several roles are listed, decide on the first one."
+      },
+      "criteria": {
+        "acheteur": "Could buy the author's offer: founder, CEO, Président, Gérant, Directeur général, Directeur commercial, Head of Sales, CRO or Directeur marketing at a company that sells to other businesses (software, industry, B2B services, a firm with its own clients).",
+        "pair": "Does the same job as the author: growth, outbound, lead generation or GTM consultant or agency, freelance SDR, sales coach, 'J'aide les dirigeants à...', fractional CMO or CRO, AI automation builder for sales teams.",
+        "vendeur": "An individual contributor in sales or partnerships, at any company: SDR, BDR, account executive, business developer, account manager, sales rep, partnerships manager, typically at a SaaS, data provider, CRM vendor, bank or insurer.",
+        "recruteur": "Recruiter, talent acquisition, headhunter, chasseur de têtes, HR at a staffing firm, or a headline whose main message is a job offer.",
+        "autre": "Student, job seeker, journalist, public sector, teacher, a consumer-facing role, an empty or initials-only headline, or a role that fits none of the above."
+      }
+    }
+  }
+}

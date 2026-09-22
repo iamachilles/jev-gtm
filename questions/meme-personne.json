@@ -1,0 +1,39 @@
+{
+  "slug": "meme-personne",
+  "titre": "Dire si deux contacts sont la même personne",
+  "description": "Pour dédoublonner un CRM ou fusionner deux exports (Sales Navigator, salon, base client), Jev compare deux fiches contact sans clé commune et dit si elles désignent la même personne. Les oui sûrs se fusionnent automatiquement, les non restent séparés, les lignes sous le seuil vont à un humain. Le rapprochement exact des emails se fait avant, par code : Jev ne reçoit que les paires que le code ne sait pas trancher.",
+  "categorie": "nettoyer",
+  "colonnes": [
+    {
+      "cle": "contact_a",
+      "colonnes": [
+        "nom_a",
+        "email_a",
+        "entreprise_a",
+        "poste_a",
+        "ville_a"
+      ]
+    },
+    {
+      "cle": "contact_b",
+      "colonnes": [
+        "nom_b",
+        "email_b",
+        "entreprise_b",
+        "poste_b",
+        "ville_b"
+      ]
+    }
+  ],
+  "seuil_confiance": 0.7,
+  "questions": {
+    "meme_personne": {
+      "type": "noul",
+      "instructions": "Do `contact_a` and `contact_b` (two contact records from different sources) describe the same person? Names may differ in form: accents, capitals, first name and last name swapped, a nickname ('Nico' for Nicolas), initials, a compound name shortened, a maiden or married name. Emails may differ (personal vs professional, old vs new employer). Company, role and city must be compatible or explained by a job change.",
+      "criteria": {
+        "true": "Same person: the names match up to accents, order, nickname or initials, or one email is built from the other name, and the company, role and city agree, or the difference reads as a job change or a promotion (same name, new company or new title, same or nearby city).",
+        "false": "Different people: the names differ beyond a variant (different first names, different surnames), or the same name appears with a different company, a different city and an unrelated role at once (a homonym), or the emails point to two different named persons."
+      }
+    }
+  }
+}

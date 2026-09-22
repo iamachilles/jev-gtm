@@ -1,0 +1,22 @@
+{
+  "slug": "evenement-angle",
+  "titre": "Vérifier qu'un événement de l'entreprise soutient l'angle proposé",
+  "description": "Avant de personnaliser un message sur un événement (recrutement, levée, nomination, annonce), Jev vérifie que l'événement soutient vraiment l'angle choisi. Il reçoit l'entreprise, l'événement daté et l'angle en une phrase, et rend la probabilité que l'un justifie l'autre. Les « non » retombent sur un message générique plutôt qu'une personnalisation à côté de la plaque.",
+  "categorie": "message",
+  "colonnes": [
+    "entreprise",
+    "evenement",
+    "angle"
+  ],
+  "seuil_confiance": 0.6,
+  "questions": {
+    "soutient": {
+      "type": "noul",
+      "instructions": "`evenement` is a dated fact about `entreprise` (a job post, a funding round, a new hire, a product or office announcement). `angle` is the one-sentence premise a prospecting message would open with. Does the event give direct evidence for that premise, so that a reader at the company would find the link obvious and accurate? Today is 2026-09-22.",
+      "criteria": {
+        "true": "The event directly shows the situation the angle assumes: hiring a first SDR supports 'you are building an outbound team', opening an office in Munich supports 'you are expanding into Germany', a fundraise announced for sales expansion supports 'you are accelerating your commercial growth'.",
+        "false": "The event is unrelated to the angle, contradicts it (a hiring freeze against 'you are growing'), is too old to be current (more than a year), or is too vague to carry the premise (a team seminar photo against 'you are restructuring sales')."
+      }
+    }
+  }
+}

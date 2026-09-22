@@ -1,0 +1,26 @@
+{
+  "slug": "tagger-posts",
+  "titre": "Tagger un corpus de posts pour retrouver les idées de contenu",
+  "description": "Vos anciens posts (ou ceux d'un créateur que vous suivez) exportés en tableau passent devant Jev, qui donne à chacun un thème de votre liste. Le tableau se croise ensuite avec les impressions ou les commentaires pour voir quel thème porte et lequel manque au calendrier. Les sept thèmes ci-dessous sont ceux d'un créateur qui parle de prospection et d'IA aux dirigeants de PME : remplacez-les par les vôtres.",
+  "categorie": "audience",
+  "colonnes": [
+    "texte"
+  ],
+  "seuil_confiance": 0.7,
+  "max_chars_par_colonne": 4000,
+  "questions": {
+    "theme": {
+      "type": "choice",
+      "instructions": "Read this LinkedIn post (`texte`) and pick its main theme, the one you would file it under. When a post touches two themes, choose the one carried by the hook and the conclusion.",
+      "criteria": {
+        "prospection": "Cold outreach, email and LinkedIn sequences, reply rates, targeting lists, follow-ups, meeting booking.",
+        "outils_ia": "AI models, agents, automation, scrapers, prompts, a tool test with numbers, a comparison between tools.",
+        "contenu_linkedin": "How to write posts, hooks, formats, personal branding, engagement, lead magnets, audience growth.",
+        "recrutement_vente": "Hiring, onboarding or managing salespeople and SDRs, compensation, ramp-up, team structure.",
+        "strategie_gtm": "Positioning, ICP, pricing, offer design, market choice, channel mix, growth plan.",
+        "retour_experience": "A personal story, a failure, a lesson learned, a behind-the-scenes moment, or numbers from the author's own business without a how-to.",
+        "autre": "Reposts, event announcements, congratulations, hiring posts for the author's own company, or anything outside the list."
+      }
+    }
+  }
+}

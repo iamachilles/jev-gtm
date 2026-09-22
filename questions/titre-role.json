@@ -1,9 +1,11 @@
 {
-  "slug": "intitule-role",
+  "slug": "titre-role",
   "titre": "Qualifier un intitulé LinkedIn : fondateur, directeur, salarié, indépendant",
   "description": "Avant de payer un enrichissement ou d'envoyer un lead à un agent, Jev lit le titre LinkedIn (headline) et dit à quelle famille de rôle il appartient. C'est la question passée sur 5 079 intitulés le 21/09/2026 : 80,1 % d'accord avec gpt-4o-mini, 0,17 $, et Jev avait raison 4 fois sur 5 sur les désaccords tranchables.",
-  "etape_gtm": "ciblage",
-  "colonnes": ["linkedin_headline"],
+  "categorie": "cibler",
+  "colonnes": [
+    "linkedin_headline"
+  ],
   "seuil_confiance": 0.9,
   "questions": {
     "role": {

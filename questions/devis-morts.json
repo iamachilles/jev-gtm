@@ -1,0 +1,28 @@
+{
+  "slug": "devis-morts",
+  "titre": "Scorer les devis morts pour décider lesquels rappeler",
+  "description": "Un devis envoyé, puis plus rien : la plupart des CRM en gardent des centaines. Jev lit l'historique de chaque devis sans suite et rend une note de chances de 0 à 4 ; les 3 et 4 partent en relance (appel ou séquence de réactivation), les 0 sont archivés, le milieu attend une occasion. L'âge du devis est calculé par code et donné en mois.",
+  "categorie": "prioriser",
+  "colonnes": [
+    "entreprise",
+    "objet_devis",
+    "montant_ht",
+    "anciennete_mois",
+    "historique"
+  ],
+  "seuil_confiance": 0.7,
+  "max_chars_par_colonne": 4000,
+  "questions": {
+    "chances": {
+      "type": "score",
+      "instructions": "`historique` is the log of exchanges around a quote (`objet_devis`, `montant_ht` in euros) sent to `entreprise` that never closed; `anciennete_mois` is the age of the quote in months, set by code. Rate the chance that a call or a reactivation message now would reopen the deal.",
+      "criteria": [
+        "0, dead: the prospect said no clearly, chose a competitor, closed or was acquired, asked not to be contacted, or the contact left and nobody replaced them.",
+        "1, cold: silence after the quote and the follow-ups, no reason given, or a quote older than 18 months with no interaction since.",
+        "2, lukewarm: the prospect showed interest then went quiet, refused on price without choosing anyone else, or said 'not now' without a date.",
+        "3, warm: the prospect gave a reason that can change (budget next year, waiting for a decision, project postponed to a stated period) and that period is now reached or close.",
+        "4, hot: the prospect asked to be recontacted at a date that has come, the blocking reason is gone (new budget, new manager, competitor contract ending), or there was a recent interaction (reply, meeting request, page visit, new request) after the quote went quiet."
+      ]
+    }
+  }
+}

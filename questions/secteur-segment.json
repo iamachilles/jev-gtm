@@ -1,0 +1,29 @@
+{
+  "slug": "secteur-segment",
+  "titre": "Rattacher une entreprise à un secteur ou à un segment de votre liste",
+  "description": "Une liste d'entreprises sortie d'un scrape ou d'un export CRM arrive avec des secteurs libres, vides ou en anglais ; Jev lit le nom, la description et le site et range chaque société dans un segment de votre liste. Le segment sert ensuite à choisir la séquence, l'angle ou l'exclusion. Les huit segments ci-dessous sont ceux d'un prestataire qui vend aux PME B2B françaises : remplacez-les par les vôtres, en gardant une case de repli.",
+  "categorie": "nettoyer",
+  "colonnes": [
+    "nom",
+    "description",
+    "site_web"
+  ],
+  "seuil_confiance": 0.8,
+  "max_chars_par_colonne": 3000,
+  "questions": {
+    "segment": {
+      "type": "choice",
+      "instructions": "Assign this company (`nom`, `description`, `site_web`) to one segment, based on what it sells and to whom. The domain name can help when the description is short. Pick `autre` when nothing fits or the text is too thin.",
+      "criteria": {
+        "logiciel_saas": "Sells software, a platform or an app to other companies, by subscription or licence: 'plateforme', 'logiciel', 'SaaS', 'application', 'API'.",
+        "services_b2b": "Sells expertise or time to other companies: consulting, agency, law firm, accounting, recruiting, training, outsourcing, IT services, marketing services.",
+        "industrie": "Makes or assembles physical products for professionals: factory, manufacturer, machines, components, textiles, chemicals, 'fabricant', 'usine'.",
+        "commerce_distribution": "Buys or makes goods and sells them to consumers or resellers, wholesale or retail, online or in stores: distributor, retailer, e-commerce, shop, 'négoce', 'boutique'.",
+        "batiment_immobilier": "Construction, renovation, architecture, real estate development, property management, brokerage: 'promoteur', 'travaux', 'agence immobilière'.",
+        "sante": "Care, medical devices, pharma, biotech, clinics, laboratories, wellness delivered by health professionals.",
+        "finance_assurance": "Banking, insurance, brokerage, payment, lending, wealth management, fintech serving companies or individuals.",
+        "autre": "Public sector, association, education, media, hospitality, energy, transport, or a description too short to decide."
+      }
+    }
+  }
+}

@@ -2,8 +2,11 @@
   "slug": "tri-reponses",
   "titre": "Trier les réponses d'une campagne",
   "description": "Chaque réponse à une séquence email ou LinkedIn est rangée dans une case : intéressé, pas maintenant, hors cible, à transférer, désinscription, autre. Les réponses sûres partent dans le bon pipeline sans lecture ; celles sous le seuil de confiance vont à un humain.",
-  "etape_gtm": "reponses",
-  "colonnes": ["message_envoye", "reponse"],
+  "categorie": "reponses",
+  "colonnes": [
+    "message_envoye",
+    "reponse"
+  ],
   "seuil_confiance": 0.8,
   "max_chars_par_colonne": 2000,
   "questions": {

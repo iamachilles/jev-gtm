@@ -1,0 +1,30 @@
+{
+  "slug": "correctifs-seo",
+  "titre": "Décider les correctifs SEO d'une page",
+  "description": "Un audit SEO sort des centaines de pages avec un tableau de signaux (title, meta description, H1, nombre de mots, premier paragraphe) et il faut décider quoi corriger en premier sur chacune sans les ouvrir une à une. Jev reçoit ces champs avec le mot-clé visé et rend le correctif prioritaire parmi une liste fermée, ou « rien à corriger ». Le résultat alimente directement un tableau de tâches pour le rédacteur ou le développeur. Les seuils (longueurs, nombre de mots) sont ceux d'un site B2B classique, à ajuster aux vôtres.",
+  "categorie": "marketing",
+  "colonnes": [
+    "url",
+    "mot_cle_cible",
+    "title",
+    "meta_description",
+    "h1",
+    "nb_mots",
+    "premier_paragraphe"
+  ],
+  "seuil_confiance": 0.7,
+  "questions": {
+    "correctif": {
+      "type": "choice",
+      "instructions": "These fields describe one page of our website that targets the keyword `mot_cle_cible`. Pick the ONE fix to do first. Check in this order and stop at the first that applies: the page content is about something else than the keyword; the body is too thin; the H1 is wrong; the title tag is wrong; the meta description is wrong; otherwise nothing to fix. A field that reads 'absent' or 'vide' is missing.",
+      "criteria": {
+        "revoir_mot_cle": "The `title`, `h1` and `premier_paragraphe` talk about a different subject than `mot_cle_cible`: the keyword does not fit this page and must be reassigned before anything else.",
+        "etoffer_contenu": "The page is on topic but `nb_mots` is under 300, or `premier_paragraphe` never names the subject of the keyword.",
+        "corriger_h1": "The `h1` is missing, or it does not contain the keyword or a close variant while the title does, or it is a generic word ('Accueil', 'Bienvenue', 'Blog').",
+        "reecrire_title": "The `title` is missing, longer than 65 characters, does not contain the keyword or a close variant, or is a generic label ('Accueil', the site name alone).",
+        "reecrire_meta_description": "The `meta_description` is missing, shorter than 70 or longer than 160 characters, does not mention the keyword, or repeats the title word for word.",
+        "rien_a_corriger": "Keyword, title, H1, body length and meta description all pass the checks above."
+      }
+    }
+  }
+}

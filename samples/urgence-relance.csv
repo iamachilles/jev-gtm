@@ -1,0 +1,11 @@
+id,etape,dernier_echange,jours_depuis
+1,Proposition envoyée,Nous avons envoyé le devis à 6 000 € le 4 septembre ; aucune réponse de Claire Dumont (Nuvola) depuis.,18
+2,Rendez-vous pris,Julien Barre (Vertigo Robotics) a confirmé le rendez-vous du 25 septembre et demandé l'ordre du jour ; nous ne l'avons pas encore envoyé.,2
+3,Perdu,Marc Bellune a choisi un autre prestataire et nous remercie pour le temps passé.,30
+4,Premier contact,"Nous avons envoyé le premier email de la séquence à Sophie Lang (Corvus Avocats), pas de réponse.",3
+5,Intéressé,"Paul Martin (Groupe Aléa) a répondu 'intéressant, laissez-moi y réfléchir', sans donner de date.",9
+6,Reporté,"Ana Ribeiro nous a demandé de revenir vers elle en janvier, après la clôture de leur exercice.",40
+7,Qualification,"Réponse automatique : absente jusqu'au 29 septembre, contacter l'accueil en cas d'urgence.",4
+8,Intéressé,Nadia Ferreira (Lumen Énergie) a demandé une étude de cas dans son secteur ; nous avons dit oui et rien envoyé.,6
+9,Gagné,"Contrat signé avec Martin Technologies, démarrage le 1er octobre.",5
+10,Intéressé,Appel découverte fait avec Karim Benali (Habitat Rive Gauche) ; il devait nous transmettre les chiffres de son équipe et n'a rien envoyé.,12

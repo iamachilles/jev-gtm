@@ -1,0 +1,27 @@
+{
+  "slug": "agent-envoie-attend",
+  "titre": "Décider si l'agent envoie, attend ou demande à un humain",
+  "description": "Un agent qui tient les conversations de prospection (LinkedIn, email) doit décider à chaque tour ce qu'il fait de son brouillon : l'envoyer seul, attendre, ou passer la main à un humain. Jev reçoit l'historique, le brouillon et le délai depuis le dernier message, avec les règles de la maison, et rend une des trois décisions avec sa probabilité. Les règles ci-dessous sont un exemple (une agence de prospection qui délègue les premiers échanges à un agent) : à réécrire dans `rules`. Sous le seuil, la décision par défaut est d'escalader.",
+  "categorie": "prioriser",
+  "colonnes": [
+    "historique",
+    "brouillon",
+    "jours_depuis_dernier_message"
+  ],
+  "seuil_confiance": 0.8,
+  "max_chars_par_colonne": 4000,
+  "questions": {
+    "decision": {
+      "type": "choice",
+      "instructions": {
+        "rules": "The agent may send on its own only: a factual answer to a simple question about what we do, a thank-you, the link to the resource we promised, or a follow-up after 4 days or more without reply, up to 2 follow-ups in total. The agent must hand over to a human when the prospect: asks about price, contract, legal or data protection; proposes or asks for a meeting time; complains, is angry or asks to stop; asks something the brief does not cover; is a client or a partner we already work with; or writes in a language other than French or English. The agent must wait when: the last message is ours and less than 4 days old; the prospect said they would come back later and that moment has not come; an out of office is running; or we already sent 2 follow-ups.",
+        "question": "Given `rules`, `historique` (the conversation, each line prefixed 'Agent :' or 'Prospect :', most recent last), `brouillon` (the message the agent wants to send next) and `jours_depuis_dernier_message`, what should the agent do now?"
+      },
+      "criteria": {
+        "envoyer": "The draft is allowed by the rules and nothing in the conversation requires a human: send it now.",
+        "attendre": "It is too early to write again, the prospect asked for time, an out of office is running, or the follow-up quota is spent: do nothing for now.",
+        "escalader": "A human must read the thread before anything is sent: price, contract, legal, data protection, meeting scheduling, complaint, anger, opt-out, a question outside the brief, an existing client or partner, a foreign language, or a draft that says something the rules do not allow."
+      }
+    }
+  }
+}

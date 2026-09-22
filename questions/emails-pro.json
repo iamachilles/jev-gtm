@@ -1,0 +1,28 @@
+{
+  "slug": "emails-pro",
+  "titre": "Classer les emails reçus : lead entrant, partenariat, prospection reçue, presse, autre",
+  "description": "Tout ce qui arrive dans la boîte de contact ou celle du dirigeant passe devant Jev, qui range chaque email dans une case : les leads entrants filent au commercial, les propositions de partenariat et de presse à la personne qui décide, la prospection reçue et l'administratif s'archivent sans lecture. Les catégories sont celles d'une boîte de dirigeant de PME de services : ajoutez ou retirez des cases selon ce que vous recevez.",
+  "categorie": "reponses",
+  "colonnes": [
+    "expediteur",
+    "objet",
+    "corps"
+  ],
+  "seuil_confiance": 0.8,
+  "max_chars_par_colonne": 3000,
+  "questions": {
+    "categorie": {
+      "type": "choice",
+      "instructions": "An email arrived in the inbox of a small B2B company: `expediteur` is the sender address or name, `objet` the subject, `corps` the body. Which category does it belong to? Decide on what the sender wants from us.",
+      "criteria": {
+        "lead_entrant": "A prospect or a client asks about our services, prices, availability, a quote, a call, or follows up on a form they filled on our site.",
+        "partenariat": "Another company proposes to work together: referral deal, co-marketing, joint webinar, integration, reselling, event sponsorship, affiliation.",
+        "prospection_recue": "Someone tries to sell us something we did not ask for: a tool, an agency, outsourcing, leads, SEO, recruiting services, a 'quick question' cold email ending with a pitch.",
+        "presse": "A journalist, podcast host, event organizer or newsletter editor asks for an interview, a quote, a talk, a contribution or a comment.",
+        "candidature": "A person applies for a job or an internship, sends a CV, or asks whether we are hiring.",
+        "administratif": "Invoices, payment reminders, bank, accountant, insurance, tax office, legal notices, tool notifications, subscription renewals.",
+        "autre": "Newsletters, personal messages, spam without a pitch, or an email too short to decide."
+      }
+    }
+  }
+}

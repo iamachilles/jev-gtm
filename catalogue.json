@@ -1,0 +1,468 @@
+{
+ "titre": "50 cas d'usage de prospection avec Jev",
+ "categories": [
+  {
+   "id": "cibler",
+   "nom": "Cibler",
+   "sous_titre": "trouver les bonnes personnes et les bonnes entreprises",
+   "cas": [
+    {
+     "numero": 1,
+     "slug": "titre-role",
+     "nom": "Trier les titres LinkedIn : fondateur, directeur, salarié, indépendant",
+     "entree": "le titre LinkedIn",
+     "decision": "une famille de rôle parmi cinq",
+     "brique": "choix"
+    },
+    {
+     "numero": 2,
+     "slug": "title-sweep",
+     "nom": "Noter tous les intitulés d'un compte cible de 1 à 5 selon leur rôle dans l'achat",
+     "entree": "l'intitulé, le service, encore en poste ou pas",
+     "decision": "une note de 1 (exclu) à 5 (tient le problème)",
+     "brique": "score"
+    },
+    {
+     "numero": 3,
+     "slug": "profil-complet",
+     "nom": "Relire les profils complets des meilleurs intitulés sur le même barème",
+     "entree": "titre, présentation, postes actuels et passés",
+     "decision": "une note de 1 à 5",
+     "brique": "score"
+    },
+    {
+     "numero": 4,
+     "slug": "bon-persona",
+     "nom": "Dire si une personne correspond au persona visé",
+     "entree": "titre, présentation, entreprise",
+     "decision": "oui ou non, avec la probabilité",
+     "brique": "oui-non"
+    },
+    {
+     "numero": 5,
+     "slug": "trier-reseau",
+     "nom": "Trier son réseau LinkedIn ou ses contacts : à contacter, à revoir, à ignorer",
+     "entree": "l'export des relations ou des contacts",
+     "decision": "contacter, revoir ou ignorer",
+     "brique": "choix"
+    },
+    {
+     "numero": 6,
+     "slug": "fit-client-ideal",
+     "nom": "Apparier une entreprise, une bio de dirigeant ou un message au client idéal",
+     "entree": "la fiche ou le message, et votre client idéal",
+     "decision": "oui ou non",
+     "brique": "oui-non"
+    }
+   ]
+  },
+  {
+   "id": "qualifier",
+   "nom": "Qualifier",
+   "sous_titre": "dire si ça vaut le coup avant de dépenser du temps ou des crédits",
+   "cas": [
+    {
+     "numero": 7,
+     "slug": "score-lead",
+     "nom": "Scorer un lead contre votre grille : chaud, tiède, froid",
+     "entree": "la fiche du lead et votre grille",
+     "decision": "une note de 0 à 3",
+     "brique": "score"
+    },
+    {
+     "numero": 8,
+     "slug": "site-client-ideal",
+     "nom": "Dire si une entreprise correspond au client idéal depuis son site",
+     "entree": "la page d'accueil ou la description",
+     "decision": "oui ou non",
+     "brique": "oui-non"
+    },
+    {
+     "numero": 9,
+     "slug": "avant-enrichissement",
+     "nom": "Filtrer les leads avant de payer un enrichissement",
+     "entree": "ce qu'on sait déjà du lead",
+     "decision": "enrichir ou pas",
+     "brique": "oui-non"
+    },
+    {
+     "numero": 10,
+     "slug": "prestataire-dirigeants",
+     "nom": "Écarter les prestataires qui vendent aux dirigeants (concurrents, pairs)",
+     "entree": "titre et présentation",
+     "decision": "vend aux dirigeants : oui ou non",
+     "brique": "oui-non"
+    },
+    {
+     "numero": 11,
+     "slug": "appel-offres",
+     "nom": "Qualifier un appel d'offres : fit et probabilité de gain",
+     "entree": "le texte de l'appel d'offres",
+     "decision": "une note de fit et une note de chances",
+     "brique": "score"
+    },
+    {
+     "numero": 12,
+     "slug": "acheteur-cinq-questions",
+     "nom": "Confirmer qui est vraiment l'acheteur avec cinq questions par profil",
+     "entree": "le profil complet",
+     "decision": "cinq oui ou non",
+     "brique": "oui-non"
+    }
+   ]
+  },
+  {
+   "id": "signaux",
+   "nom": "Repérer les signaux",
+   "sous_titre": "savoir qui bouge, sans lire chaque offre ni chaque post",
+   "cas": [
+    {
+     "numero": 13,
+     "slug": "score-signal",
+     "nom": "Noter un signal (offre d'emploi, levée, post) de 0 à 3 sur votre grille",
+     "entree": "le texte du signal",
+     "decision": "une note de 0 à 3",
+     "brique": "score"
+    },
+    {
+     "numero": 14,
+     "slug": "signal-posts-sociaux",
+     "nom": "Détecter les signaux d'achat dans un flux de posts (Reddit, X, LinkedIn)",
+     "entree": "chaque post du flux",
+     "decision": "signal d'achat : oui ou non",
+     "brique": "oui-non"
+    },
+    {
+     "numero": 15,
+     "slug": "notes-de-vente",
+     "nom": "Extraire d'une note de vente l'intention, l'urgence et l'intérêt produit",
+     "entree": "les notes d'appel ou de CRM",
+     "decision": "trois oui ou non",
+     "brique": "oui-non"
+    },
+    {
+     "numero": 16,
+     "slug": "veille-criteres",
+     "nom": "Faire lire une veille (presse, concurrents) contre vos critères",
+     "entree": "un titre ou une actualité",
+     "decision": "ça compte pour moi : oui ou non",
+     "brique": "oui-non"
+    },
+    {
+     "numero": 17,
+     "slug": "en-marche",
+     "nom": "Distinguer un compte en marché d'un simple bon fit",
+     "entree": "la fiche et ses signaux récents",
+     "decision": "en marché : oui ou non",
+     "brique": "oui-non"
+    }
+   ]
+  },
+  {
+   "id": "reponses",
+   "nom": "Trier les réponses",
+   "sous_titre": "et tout ce qui arrive dans la boîte",
+   "cas": [
+    {
+     "numero": 18,
+     "slug": "tri-reponses",
+     "nom": "Trier les réponses d'une campagne : intéressé, pas maintenant, hors cible, à transférer",
+     "entree": "le message envoyé et la réponse",
+     "decision": "une catégorie parmi six",
+     "brique": "choix"
+    },
+    {
+     "numero": 19,
+     "slug": "router-demande",
+     "nom": "Router une demande entrante : vente, support, facturation, spam",
+     "entree": "le message entrant",
+     "decision": "un service",
+     "brique": "choix"
+    },
+    {
+     "numero": 20,
+     "slug": "emails-pro",
+     "nom": "Classer les emails reçus : partenariat, prospection reçue, presse, autre",
+     "entree": "l'email",
+     "decision": "une catégorie",
+     "brique": "choix"
+    },
+    {
+     "numero": 21,
+     "slug": "reponse-automatique",
+     "nom": "Détecter une réponse automatique (absence, bounce)",
+     "entree": "la réponse",
+     "decision": "automatique : oui ou non",
+     "brique": "oui-non"
+    },
+    {
+     "numero": 22,
+     "slug": "depart-contact",
+     "nom": "Détecter le départ d'un contact dans sa réponse",
+     "entree": "la réponse",
+     "decision": "a quitté l'entreprise : oui ou non",
+     "brique": "oui-non"
+    },
+    {
+     "numero": 23,
+     "slug": "maturite-demande",
+     "nom": "Noter la maturité d'achat d'une demande entrante",
+     "entree": "la demande",
+     "decision": "une note de 0 à 3",
+     "brique": "score"
+    },
+    {
+     "numero": 24,
+     "slug": "desinscription",
+     "nom": "Détecter une demande d'arrêt ou de désinscription dans une conversation",
+     "entree": "le dernier message",
+     "decision": "veut arrêter : oui ou non",
+     "brique": "oui-non"
+    }
+   ]
+  },
+  {
+   "id": "nettoyer",
+   "nom": "Nettoyer la base",
+   "sous_titre": "dédoublonner, normaliser, tenir le CRM à jour sans y passer le week-end",
+   "cas": [
+    {
+     "numero": 25,
+     "slug": "secteur-segment",
+     "nom": "Rattacher une entreprise à un secteur ou à un segment de votre liste",
+     "entree": "le nom, la description, le site",
+     "decision": "un secteur parmi les vôtres",
+     "brique": "choix"
+    },
+    {
+     "numero": 26,
+     "slug": "meme-societe",
+     "nom": "Dire si deux fiches désignent la même entreprise (SIRENE, LinkedIn, CRM)",
+     "entree": "les deux fiches",
+     "decision": "même société : oui ou non",
+     "brique": "oui-non"
+    },
+    {
+     "numero": 27,
+     "slug": "meme-personne",
+     "nom": "Dire si deux contacts sont la même personne",
+     "entree": "les deux contacts",
+     "decision": "même personne : oui ou non",
+     "brique": "oui-non"
+    },
+    {
+     "numero": 28,
+     "slug": "activite-crm",
+     "nom": "Classer une activité (appel, email, message) pour mettre le CRM à jour",
+     "entree": "l'activité",
+     "decision": "un type d'activité et son étape",
+     "brique": "choix"
+    },
+    {
+     "numero": 29,
+     "slug": "spam-entree",
+     "nom": "Filtrer le spam et les faux leads à l'entrée",
+     "entree": "la soumission de formulaire",
+     "decision": "réel ou spam",
+     "brique": "oui-non"
+    }
+   ]
+  },
+  {
+   "id": "audience",
+   "nom": "Comprendre son audience",
+   "sous_titre": "ce que vos commentaires et vos abonnés disent de vos clients",
+   "cas": [
+    {
+     "numero": 30,
+     "slug": "commentaires-colonnes",
+     "nom": "Transformer des commentaires en colonnes : parle d'un projet, décideur, demande la ressource",
+     "entree": "le commentaire et le titre de son auteur",
+     "decision": "trois oui ou non",
+     "brique": "oui-non"
+    },
+    {
+     "numero": 31,
+     "slug": "reacteurs-post",
+     "nom": "Classer les réacteurs d'un post : acheteur, pair, vendeur, recruteur",
+     "entree": "le titre de la personne",
+     "decision": "un profil parmi quatre",
+     "brique": "choix"
+    },
+    {
+     "numero": 32,
+     "slug": "tagger-posts",
+     "nom": "Tagger un corpus de posts pour retrouver les idées de contenu",
+     "entree": "chaque post",
+     "decision": "un thème parmi les vôtres",
+     "brique": "choix"
+    },
+    {
+     "numero": 33,
+     "slug": "voix-client",
+     "nom": "Extraire la voix du client et les objections des commentaires",
+     "entree": "le commentaire",
+     "decision": "une objection ou un besoin parmi une liste",
+     "brique": "choix"
+    },
+    {
+     "numero": 34,
+     "slug": "fils-repondre",
+     "nom": "Choisir les fils de discussion où répondre maintenant",
+     "entree": "le fil",
+     "decision": "une note d'intérêt",
+     "brique": "score"
+    }
+   ]
+  },
+  {
+   "id": "prioriser",
+   "nom": "Prioriser et décider",
+   "sous_titre": "qui appeler en premier, et ce que l'agent fait seul",
+   "cas": [
+    {
+     "numero": 35,
+     "slug": "ordre-appels",
+     "nom": "Ordonner les leads à appeler en premier",
+     "entree": "la fiche et l'historique",
+     "decision": "une note de priorité",
+     "brique": "score"
+    },
+    {
+     "numero": 36,
+     "slug": "envoyer-creuser-abandonner",
+     "nom": "Décider pour chaque compte : envoyer, creuser ou abandonner",
+     "entree": "la fiche et son score",
+     "decision": "envoyer, creuser ou abandonner",
+     "brique": "choix"
+    },
+    {
+     "numero": 37,
+     "slug": "urgence-relance",
+     "nom": "Noter l'urgence de relance de chaque ligne d'un tableau",
+     "entree": "la ligne",
+     "decision": "une note d'urgence",
+     "brique": "score"
+    },
+    {
+     "numero": 38,
+     "slug": "devis-morts",
+     "nom": "Scorer les devis morts pour décider lesquels rappeler",
+     "entree": "le devis et l'historique",
+     "decision": "une note de chances",
+     "brique": "score"
+    },
+    {
+     "numero": 39,
+     "slug": "agent-envoie-attend",
+     "nom": "Décider si l'agent envoie, attend ou demande à un humain",
+     "entree": "l'état de la conversation",
+     "decision": "envoyer, attendre ou escalader",
+     "brique": "choix"
+    },
+    {
+     "numero": 40,
+     "slug": "prochain-geste",
+     "nom": "Choisir le prochain geste d'un agent parmi vos playbooks",
+     "entree": "la situation du compte",
+     "decision": "un playbook",
+     "brique": "choix"
+    }
+   ]
+  },
+  {
+   "id": "message",
+   "nom": "Choisir le bon message",
+   "sous_titre": "décider avant d'écrire, contrôler avant d'envoyer",
+   "cas": [
+    {
+     "numero": 41,
+     "slug": "angle-message",
+     "nom": "Choisir l'angle ou la séquence adaptés à chaque prospect",
+     "entree": "la fiche et vos angles",
+     "decision": "un angle parmi les vôtres",
+     "brique": "choix"
+    },
+    {
+     "numero": 42,
+     "slug": "assez-de-matiere",
+     "nom": "Décider s'il y a assez de matière pour personnaliser l'approche",
+     "entree": "ce qu'on sait du prospect",
+     "decision": "personnaliser ou message standard",
+     "brique": "oui-non"
+    },
+    {
+     "numero": 43,
+     "slug": "controle-email-ia",
+     "nom": "Contrôler un email rédigé par une IA avant envoi",
+     "entree": "l'email et le contexte",
+     "decision": "part ou à revoir",
+     "brique": "oui-non"
+    },
+    {
+     "numero": 44,
+     "slug": "meilleure-accroche",
+     "nom": "Choisir la meilleure accroche parmi plusieurs variantes",
+     "entree": "les variantes et le prospect",
+     "decision": "la variante retenue",
+     "brique": "choix"
+    },
+    {
+     "numero": 45,
+     "slug": "evenement-angle",
+     "nom": "Vérifier qu'un événement de l'entreprise soutient l'angle proposé",
+     "entree": "l'événement et l'angle",
+     "decision": "soutient : oui ou non",
+     "brique": "oui-non"
+    }
+   ]
+  },
+  {
+   "id": "marketing",
+   "nom": "Marketing et publicité",
+   "sous_titre": "les mêmes questions fermées, côté marketing",
+   "cas": [
+    {
+     "numero": 46,
+     "slug": "creation-pub",
+     "nom": "Noter une création publicitaire : qualité, conformité, fatigue",
+     "entree": "le visuel ou le texte de l'annonce",
+     "decision": "une note par critère",
+     "brique": "score"
+    },
+    {
+     "numero": 47,
+     "slug": "pubs-concurrents",
+     "nom": "Étiqueter les publicités des concurrents par étape du tunnel",
+     "entree": "l'annonce",
+     "decision": "une étape du tunnel",
+     "brique": "choix"
+    },
+    {
+     "numero": 48,
+     "slug": "performance-post",
+     "nom": "Prédire la performance d'un post avant publication",
+     "entree": "le brouillon",
+     "decision": "une note",
+     "brique": "score"
+    },
+    {
+     "numero": 49,
+     "slug": "correctifs-seo",
+     "nom": "Décider les correctifs SEO d'une page",
+     "entree": "la page",
+     "decision": "un correctif parmi une liste",
+     "brique": "choix"
+    },
+    {
+     "numero": 50,
+     "slug": "terme-recherche-acheteur",
+     "nom": "Dire si un terme de recherche Google Ads vient d'un acheteur",
+     "entree": "le terme de recherche",
+     "decision": "acheteur : oui ou non",
+     "brique": "oui-non"
+    }
+   ]
+  }
+ ]
+}

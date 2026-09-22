@@ -39,21 +39,29 @@ def est_anglais(texte: str) -> bool:
     return sum(t.count(m) for m in mots_fr) <= 2
 
 
+catalogue = json.loads((RACINE / "catalogue.json").read_text(encoding="utf-8"))
+attendus = [(c["id"], x["slug"]) for c in catalogue["categories"] for x in c["cas"]]
+verif(len(attendus) == 50, f"{len(attendus)} cas au catalogue (attendu 50)")
+verif(len({s for _, s in attendus}) == len(attendus), "slugs du catalogue uniques")
 questions = sorted((RACINE / "questions").glob("*.json"))
-verif(len(questions) == 7, f"{len(questions)} fichiers de question (attendu 7)")
+orphelines = sorted(q.stem for q in questions if q.stem not in {s for _, s in attendus})
+verif(not orphelines, f"aucune question hors catalogue ({orphelines or 'ok'})")
 readme = (RACINE / "README.md").read_text(encoding="utf-8")
-slugs = []
-for chemin in questions:
+for cat_id, slug in attendus:
+    chemin = RACINE / "questions" / f"{slug}.json"
+    if not chemin.exists():
+        verif(False, f"questions/{slug}.json présent")
+        continue
     try:
         q = json.loads(chemin.read_text(encoding="utf-8"))
     except json.JSONDecodeError as e:
         verif(False, f"{chemin.name} : JSON invalide ({e})")
         continue
-    slug = q.get("slug")
-    slugs.append(slug)
-    verif(slug == chemin.stem, f"{chemin.name} : slug {slug!r} = nom du fichier")
-    verif(all(k in q for k in ("titre", "description", "etape_gtm", "colonnes", "questions", "seuil_confiance")), f"{chemin.name} : clés de base présentes")
+    verif(q.get("slug") == slug, f"{chemin.name} : slug = nom du fichier")
+    verif(q.get("categorie") == cat_id, f"{chemin.name} : categorie {q.get('categorie')!r} = {cat_id!r}")
+    verif(all(k in q for k in ("titre", "description", "colonnes", "questions", "seuil_confiance")), f"{chemin.name} : clés de base présentes")
     verif(0 < float(q.get("seuil_confiance", 0)) <= 1, f"{chemin.name} : seuil_confiance dans ]0, 1]")
+    verif(1 <= len(q.get("questions", {})) <= 6, f"{chemin.name} : 1 à 6 questions")
     for qid, qd in q.get("questions", {}).items():
         verif(qd.get("type") in TYPES, f"{chemin.name}/{qid} : type {qd.get('type')!r} dans {sorted(TYPES)}")
         verif(bool(qd.get("instructions")), f"{chemin.name}/{qid} : instructions non vides")
@@ -73,16 +81,20 @@ for chemin in questions:
         with exemple.open(encoding="utf-8-sig", newline="") as f:
             lecteur = csv.DictReader(f)
             cols = lecteur.fieldnames or []
-            n = sum(1 for _ in lecteur)
+            lignes = list(lecteur)
         manq = [c for c in colonnes_attendues(q) if c not in cols]
         verif(not manq, f"samples/{slug}.csv : colonnes attendues présentes ({manq or 'ok'})")
-        verif(n == 10, f"samples/{slug}.csv : {n} lignes (attendu 10)")
+        verif(len(lignes) == 10, f"samples/{slug}.csv : {len(lignes)} lignes (attendu 10)")
+        vides = sum(1 for l in lignes for c in colonnes_attendues(q) if not (l.get(c) or "").strip())
+        verif(vides <= 1, f"samples/{slug}.csv : au plus une cellule vide dans les colonnes attendues, le cas limite voulu ({vides})")
+        verif(not TIRETS.search(exemple.read_text(encoding="utf-8")), f"samples/{slug}.csv : aucun tiret cadratin")
     verif(f"`{slug}`" in readme, f"README cite `{slug}`")
 
 verif(not TIRETS.search(readme), "README : aucun tiret cadratin")
-skill = RACINE / "skill" / "jev-gtm" / "SKILL.md"
-verif(skill.exists() and skill.read_text(encoding="utf-8").startswith("---"), "skill/jev-gtm/SKILL.md présent avec un frontmatter")
+skill = RACINE / "skill" / "jev-prospection" / "SKILL.md"
+verif(skill.exists() and skill.read_text(encoding="utf-8").startswith("---"), "skill/jev-prospection/SKILL.md présent avec un frontmatter")
 verif((RACINE / "jev_csv.py").exists(), "jev_csv.py présent")
+verif((RACINE / "jev.py").exists(), "jev.py présent")
 verif((RACINE / "LICENSE").exists(), "LICENSE présent")
 print("PASS" if ok else "FAIL", "vérification du dépôt")
 sys.exit(0 if ok else 1)

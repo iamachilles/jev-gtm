@@ -1,0 +1,38 @@
+{
+  "slug": "en-marche",
+  "titre": "Distinguer un compte en marché d'un simple bon fit",
+  "description": "Un compte peut cocher toutes les cases de la cible sans rien acheter cette année. Jev reçoit la fiche du compte et la liste datée de ses signaux récents, et dit si le compte est en marché, autrement dit en train d'acheter ou de structurer ce que vous vendez dans les trois mois. Les « oui » passent en priorité haute, les « non » restent en nurturing. L'offre décrite dans `offer` est un exemple (prospection externalisée pour PME B2B) : à réécrire pour la vôtre.",
+  "categorie": "signaux",
+  "colonnes": [
+    {
+      "cle": "fiche",
+      "colonnes": [
+        "entreprise",
+        "secteur",
+        "effectif",
+        "description"
+      ]
+    },
+    {
+      "cle": "signaux",
+      "colonnes": [
+        "signaux_recents"
+      ]
+    }
+  ],
+  "seuil_confiance": 0.6,
+  "max_chars_par_colonne": 4000,
+  "questions": {
+    "en_marche": {
+      "type": "noul",
+      "instructions": {
+        "offer": "We sell outsourced B2B prospecting (lead lists, email and LinkedIn sequences, appointment setting) to French SMEs.",
+        "question": "`fiche` describes the account; `signaux` lists dated events from the last months (job posts, LinkedIn posts, news, tool changes). Today is 2026-09-22. Given `offer`, is this account in market, meaning actively building or buying its outbound prospecting capacity right now? Ignore how well the account fits the target: a perfect profile with no buying signal is a no."
+      },
+      "criteria": {
+        "true": "At least one signal from the last 90 days shows the account is acting on sales acquisition: hiring an SDR, BDR, Head of Sales or growth lead, a new sales leader who just arrived, a CRM or sequencer change, a fundraise or announcement about commercial expansion, a post asking for a prospecting provider or describing an outbound project.",
+        "false": "Signals are unrelated to sales acquisition (product launch, office move, award, anniversary, technical hire, CSR news), or older than 90 days, or the account is shrinking or freezing hires. A good profile without such a signal is a no."
+      }
+    }
+  }
+}

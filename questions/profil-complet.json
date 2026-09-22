@@ -1,0 +1,31 @@
+{
+  "slug": "profil-complet",
+  "titre": "Relire les profils complets des meilleurs intitulés sur le même barème",
+  "description": "Deuxième passe après un tri d'intitulés (voir `title-sweep`) : les personnes notées 4 ou 5 sur leur seul titre repassent devant Jev avec le profil entier (présentation, postes actuels et passés) sur la même grille de 1 à 5. Le profil confirme ou rétrograde le titre : un « Head of Sales » devenu consultant indépendant ou un « CEO » qui vend lui-même de la prospection redescendent. Les règles d'achat ci-dessous sont un exemple (un cabinet de prospection externalisée pour PME B2B), à réécrire pour votre offre et à garder identiques à celles utilisées pour le tri des intitulés.",
+  "categorie": "cibler",
+  "colonnes": [
+    "linkedin_headline",
+    "about",
+    "postes_actuels",
+    "postes_passes"
+  ],
+  "seuil_confiance": 0.7,
+  "max_chars_par_colonne": 3000,
+  "questions": {
+    "niveau": {
+      "type": "score",
+      "_base": 1,
+      "instructions": {
+        "buying_rules": "We sell outsourced B2B prospecting (an SDR team as a service) to French SMEs of 10 to 200 employees that sell to other companies. The buyer owns revenue and the decision to outsource: founder, CEO, directeur général, directeur commercial, VP or Head of Sales. People who run prospecting day to day (SDR, business developer, growth, sales ops) execute. Marketing and customer success hear about the pipeline without owning it. Agencies, freelancers and consultants who sell prospecting or growth services themselves are competitors, not buyers.",
+        "question": "Given `buying_rules`, rate this person from 1 to 5 using the full profile: `linkedin_headline`, `about`, `postes_actuels` (current positions, most recent first) and `postes_passes` (past positions). The current positions decide; the past only confirms seniority or reveals a competitor."
+      },
+      "criteria": [
+        "1, excluded: sells prospecting, lead generation, growth or sales consulting as their own service (agency, freelance, 'fractional', 'j'accompagne', 'growth partner'), or the current positions are all at agencies of that kind, or the profile shows a student, a retiree or a job seeker.",
+        "2, unrelated: an operating role with no link to revenue (finance, HR, legal, engineering, production, logistics, IT, customer support) and no sales role in the current positions.",
+        "3, adjacent: hears about the pipeline without owning it: marketing manager, communication, product marketing, customer success, office manager, partner or associé focused on delivery, or an owner or sales role at a company that sells to consumers.",
+        "4, executes: runs prospecting day to day at a B2B company: SDR, BDR, business developer, account executive, growth manager, sales ops, head of marketing in charge of lead generation, or a sales director at a company above 200 people.",
+        "5, owns the pain: founder, co-founder, CEO, directeur général, directeur commercial, VP Sales or Head of Sales at a B2B company of roughly 10 to 200 people, with the current position confirmed in `postes_actuels` and a past that fits (sales leadership, a previous company founded)."
+      ]
+    }
+  }
+}

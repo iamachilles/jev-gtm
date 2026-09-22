@@ -1,0 +1,25 @@
+{
+  "slug": "router-demande",
+  "titre": "Router une demande entrante : vente, support, facturation, spam",
+  "description": "Chaque message qui arrive par le formulaire de contact ou la boîte générale part vers le bon service sans qu'un humain le lise : les demandes commerciales aux ventes, les problèmes d'usage au support, les questions de paiement à la facturation, le reste à la corbeille. Sur un test d'un week-end, la précision égalait celle des grands modèles pour un coût 212 fois plus bas. Les cas sous le seuil de confiance restent dans la boîte pour un tri humain.",
+  "categorie": "reponses",
+  "colonnes": [
+    "objet",
+    "message"
+  ],
+  "seuil_confiance": 0.8,
+  "max_chars_par_colonne": 3000,
+  "questions": {
+    "service": {
+      "type": "choice",
+      "instructions": "`objet` and `message` are an inbound email or contact form submission received by a B2B software company. Which team should handle it? Decide on what the sender asks for, not on who they are. When a message mixes two requests, take the one that opens it.",
+      "criteria": {
+        "vente": "A prospect or a customer wants to buy or to learn about the offer: pricing, quote, demo, trial, comparison of plans, whether the product fits their case, an upgrade or more seats.",
+        "support": "An existing user has a problem or a how-to question about the product: a bug, an error message, a login issue, a feature that does not work, a request for documentation or training.",
+        "facturation": "About money already owed or paid: an invoice, a payment, a receipt, a refund, a double charge, a VAT number, a purchase order, a contract renewal or the cancellation of a paid plan.",
+        "spam": "Unsolicited pitch or junk: an agency selling SEO, web design, lead generation or offshore developers, a mass mailing, a phishing attempt, a fake delivery notice, a message with no request and no link to the company.",
+        "autre": "A real request that fits none of the teams above: a job application, a press or partnership request, a supplier asking for a contact, or a message too short to tell."
+      }
+    }
+  }
+}

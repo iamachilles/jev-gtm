@@ -1,0 +1,26 @@
+{
+  "slug": "signal-posts-sociaux",
+  "titre": "Détecter les signaux d'achat dans un flux de posts (Reddit, X, LinkedIn)",
+  "description": "Un flux de posts récupéré par mot-clé (Reddit, X, LinkedIn, forums) arrive dans un tableau ; Jev lit chaque post avec la description de votre offre et dit si l'auteur exprime un besoin que vous savez couvrir. Les oui partent vers un humain ou un agent qui engage la conversation, les non sont jetés sans lecture. Le bloc `offer` décrit ici un CRM pour PME de moins de 50 personnes : remplacez-le par votre offre.",
+  "categorie": "signaux",
+  "colonnes": [
+    "plateforme",
+    "auteur",
+    "texte"
+  ],
+  "seuil_confiance": 0.6,
+  "max_chars_par_colonne": 4000,
+  "questions": {
+    "signal_achat": {
+      "type": "noul",
+      "instructions": {
+        "offer": "We sell a simple CRM for French companies with fewer than 50 employees: contact tracking, follow-up reminders, pipeline view, email sync. Typical buyers: founders and sales leads who run their pipeline in a spreadsheet, or who find their current CRM too heavy or too expensive.",
+        "question": "Read `texte` (a post on `plateforme` by `auteur`). Does the author, or the company they speak for, show a buying signal for the `offer`: a need, a search, a comparison, a frustration with their current tool or process, or a request for recommendations?"
+      },
+      "criteria": {
+        "true": "The author asks which tool to pick, compares options, complains about their current CRM or spreadsheet, describes lost follow-ups or a messy pipeline, or says they are looking for or evaluating a solution in this area.",
+        "false": "News, opinion, humor, self-promotion, a job ad, a vendor pitching their own product, a post about a different problem (recruiting, fundraising, product), or someone who just finished buying or migrating."
+      }
+    }
+  }
+}

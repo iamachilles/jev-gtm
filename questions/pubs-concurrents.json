@@ -1,0 +1,27 @@
+{
+  "slug": "pubs-concurrents",
+  "titre": "Étiqueter les publicités des concurrents par étape du tunnel",
+  "description": "Les annonces des concurrents exportées d'une bibliothèque publicitaire (LinkedIn, Meta, Google) passent devant Jev avec leur texte et leur bouton ; il rend l'étape du tunnel visée par chaque annonce. Le comptage par annonceur et par étape montre où chacun met son budget (notoriété, contenu, démo, clients existants) et où le vôtre a une place. Les étapes sont classiques : gardez-les, ou ajoutez les vôtres.",
+  "categorie": "marketing",
+  "colonnes": [
+    "annonceur",
+    "texte_annonce",
+    "bouton"
+  ],
+  "seuil_confiance": 0.8,
+  "max_chars_par_colonne": 3000,
+  "questions": {
+    "etape_tunnel": {
+      "type": "choice",
+      "instructions": "This is a paid ad from a competitor (`annonceur`): `texte_annonce` is the visible copy and `bouton` the call to action label. Which stage of the funnel does the ad target? Decide on what the ad asks the reader to do and what it offers in return.",
+      "criteria": {
+        "notoriete": "Brand or story with nothing to download or buy: a manifesto, a mission, a founder quote, a slogan, a 'discover' or 'learn more' button leading to the home page.",
+        "consideration": "Offers a piece of content in exchange for attention or an email: guide, ebook, webinar, benchmark, case study, checklist, template, comparison, newsletter.",
+        "conversion": "Asks for a purchase decision or a sales contact: demo, free trial, quote, pricing, discount, limited offer, 'book a call', 'start now', 'sign up'.",
+        "fidelisation": "Speaks to existing customers or users: new feature, upgrade, customer event, referral program, renewal, community, customer portal.",
+        "recrutement": "A job ad or an employer brand message: 'we are hiring', open positions, life at the company.",
+        "unclear": "Text too short or too vague to place, or an ad without any visible offer or button."
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "voix-client",
+  "titre": "Extraire la voix du client et les objections des commentaires",
+  "description": "Les commentaires sous vos posts (ou sous ceux d'un concurrent) contiennent les objections et les besoins de votre marché, dans les mots des clients. Jev range chaque commentaire dans une case d'objection ou de besoin ; un tableau croisé donne ensuite les freins les plus fréquents, à réutiliser dans les séquences et les pages de vente. La liste ci-dessous est un exemple pour des posts sur l'automatisation de la prospection, à réécrire pour votre sujet.",
+  "categorie": "audience",
+  "colonnes": [
+    "commentaire"
+  ],
+  "seuil_confiance": 0.7,
+  "questions": {
+    "objection": {
+      "type": "choice",
+      "instructions": "This `commentaire` was posted under a LinkedIn post about automating B2B prospecting with AI. Which objection or need does the author express? Decide on the main one when several appear; a comment that only reacts, without any objection or need, goes to `aucun`.",
+      "criteria": {
+        "trop_cher": "Cost or return on investment: the price of tools, agencies or credits, 'ça coûte trop cher', doubt that it pays off.",
+        "pas_le_temps": "Lack of time, skills or people to set it up or run it: too complex, too technical, nobody in the team for it.",
+        "doute_qualite_ia": "Doubt about what the AI produces: robotic tone, mistakes, weak French, hallucinations, messages that look generated.",
+        "risque_conformite": "Legal, deliverability or reputation risk: RGPD, spam, blocked LinkedIn account, brand image, unsolicited messages annoying prospects.",
+        "demande_preuve": "Asks for evidence: results, figures, reply rates, a case study, 'ça marche vraiment ?'.",
+        "demande_methode": "Asks how to do it: the steps, the setup, the prompt, the workflow, a template.",
+        "demande_outil": "Asks which tool, stack, model or provider to use, or compares tools.",
+        "temoignage": "Shares their own experience, result or practice, positive or negative, without asking anything.",
+        "aucun": "Praise, thanks, emoji, a tag of someone else, a joke, or a comment unrelated to the topic."
+      }
+    }
+  }
+}

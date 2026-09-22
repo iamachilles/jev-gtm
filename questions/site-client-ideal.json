@@ -1,0 +1,25 @@
+{
+  "slug": "site-client-ideal",
+  "titre": "Dire si une entreprise correspond au client idéal depuis son site",
+  "description": "Avant d'enrichir un compte ou d'y chercher des contacts, Jev lit le texte de la page d'accueil (ou la description scrapée) et dit si l'entreprise entre dans le client idéal. Les oui partent en enrichissement, les non sont écartés sans dépenser un crédit, les lignes sous le seuil vont à un humain. La définition du client idéal ci-dessous est un exemple (un cabinet de prospection externalisée pour PME B2B), à réécrire pour votre offre.",
+  "categorie": "qualifier",
+  "colonnes": [
+    "entreprise",
+    "page_accueil"
+  ],
+  "seuil_confiance": 0.7,
+  "max_chars_par_colonne": 4000,
+  "questions": {
+    "client_ideal": {
+      "type": "noul",
+      "instructions": {
+        "ideal_customer": "A French company that sells a product or a service to other companies (software, industrial equipment, B2B services, professional services, B2B distribution), with a sales cycle that involves a salesperson. Out of scope: brands and shops selling to consumers, restaurants and hotels, public bodies, schools, associations, marketplaces, and companies whose own offer is prospecting, lead generation, marketing or growth services.",
+        "question": "Based on `page_accueil` (the text of the company's homepage or its description), does `entreprise` match `ideal_customer`?"
+      },
+      "criteria": {
+        "true": "The page addresses companies or professionals as customers ('dédié aux PME', 'vos équipes', 'nos clients industriels', 'demander une démo', 'demander un devis', named business clients), and the offer is a product or service bought after a discussion with a salesperson.",
+        "false": "The page addresses consumers ('livraison offerte', 'réservez votre table', 'boutique en ligne'), or describes a public body, a school, an association or a marketplace, or the company itself sells prospecting, lead generation, marketing or growth services, or the text is too short to tell."
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "slug": "assez-de-matiere",
+  "titre": "Décider s'il y a assez de matière pour personnaliser l'approche",
+  "description": "Avant d'écrire, Jev lit ce qu'on sait du prospect (titre, présentation, activité récente ou note d'enrichissement) et dit s'il existe un fait précis et récent sur lequel ouvrir le message. Oui : la ligne part vers la rédaction personnalisée, par un humain ou par un agent. Non : elle reçoit le message standard de son segment, sans perdre une heure à chercher un angle qui n'existe pas.",
+  "categorie": "message",
+  "colonnes": [
+    "linkedin_headline",
+    "about",
+    "activite_recente"
+  ],
+  "seuil_confiance": 0.6,
+  "max_chars_par_colonne": 4000,
+  "questions": {
+    "assez_de_matiere": {
+      "type": "noul",
+      "instructions": "We are about to write a cold message to this person. Based on `linkedin_headline`, `about` and `activite_recente` (their recent posts, comments or news, or a note saying none was found), is there at least one specific, recent and usable fact to open the message with? Usable means: about their work, from the last six months, and something they would recognize as their own.",
+      "criteria": {
+        "true": "A recent post or comment about a project, a problem, an opinion or a result; a change in the last six months (new role, fundraise, hire, launch, expansion); a public statement of a need in our area.",
+        "false": "Only generic facts (title, company, sector, seniority), a bare profile, a note saying no activity was found, activity older than six months, or facts unrelated to work (holidays, sport, birthday) that would sound intrusive."
+      }
+    }
+  }
+}

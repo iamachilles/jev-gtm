@@ -1,0 +1,11 @@
+id,entreprise,objet_devis,montant_ht,anciennete_mois,historique
+1,Nuvola,Prospection externalisée 6 mois,18000,4,"Devis envoyé le 12/05 après deux appels. Le 20/05 Claire répond : « on valide le budget au CODIR de septembre, revenez vers moi début septembre ». Relance le 02/09 : pas encore de réponse."
+2,Bellune Textile,Campagne emailing 3 mois,6500,14,"Devis envoyé en juillet 2025. Le DAF a répondu : « nous avons retenu une agence lilloise, merci pour votre travail ». Aucun échange depuis."
+3,Vertigo Robotics,SDR externalisé 12 mois,42000,9,Trois relances sans réponse après la démo. Le Head of Sales avait trouvé ça « très intéressant » en réunion. Silence complet depuis janvier.
+4,Groupe Aléa,Séquences LinkedIn et email,9800,2,Le directeur commercial a trouvé le prix trop élevé pour une première mission : « on repartirait sur 5 000 maximum ». Aucune suite donnée de notre côté.
+5,Lumen Énergie,Prospection industriels Sud-Ouest,24000,7,"Le dirigeant voulait attendre le recrutement d'un chef de projet, prévu pour la rentrée. Hier il a ouvert notre email de relance et visité la page tarifs du site."
+6,Corvus Avocats,Prospection directions juridiques,12000,22,"Devis envoyé en novembre 2024. L'associée n'a jamais répondu, deux relances sans retour. Son associé cofondateur a quitté le cabinet en 2025."
+7,Atelier Maud,Site e-commerce et campagne de lancement,4500,11,La fondatrice a répondu : « merci mais on arrête l'activité en fin d'année ». La boutique est fermée depuis.
+8,Martin Technologies,Veille appels d'offres et prospection,30000,5,"Le directeur BU était très favorable, la décision devait passer au COMEX de juin. En juin il écrit : « reporté à l'exercice suivant, budget bloqué ». Leur exercice commence en octobre."
+9,Menuiserie Bertrand & Fils,Prospection architectes,3800,3,"Le gérant a dit qu'il réfléchissait, puis silence. Deux relances par SMS sans réponse. Il a aimé notre post LinkedIn la semaine dernière."
+10,PayFit,Audit des process outbound,15000,6,"Le VP Sales a répondu : « merci, nous internalisons tout, inutile de revenir vers nous »."

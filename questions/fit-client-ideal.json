@@ -1,0 +1,25 @@
+{
+  "slug": "fit-client-ideal",
+  "titre": "Apparier une entreprise, une bio de dirigeant ou un message au client idéal",
+  "description": "Avant tout enrichissement ou toute prise de contact, Jev lit une fiche d'entreprise, la présentation d'un dirigeant ou un message entrant, avec la définition de votre client idéal, et dit si l'entrée correspond. Les oui sûrs passent à l'étape suivante, les non sortent de la liste, les cas sous le seuil vont à un humain. La définition du client idéal ci-dessous est un exemple (un cabinet qui vend de la prospection externalisée aux PME B2B) : à réécrire pour votre offre.",
+  "categorie": "cibler",
+  "colonnes": [
+    "type_entree",
+    "texte"
+  ],
+  "seuil_confiance": 0.7,
+  "max_chars_par_colonne": 3000,
+  "questions": {
+    "correspond_icp": {
+      "type": "noul",
+      "instructions": {
+        "ideal_customer": "A French B2B company with 10 to 250 employees that sells software or services to other companies and wants more qualified meetings: a sales team of 1 to 10 people, or a founder who still sells personally. Excluded: consumer businesses, public bodies, freelancers and solo consultants, companies over 1,000 employees, and agencies or consultants who sell prospecting, lead generation or growth services themselves.",
+        "question": "`type_entree` says whether `texte` is a company description ('entreprise'), a founder or executive bio ('bio'), or an inbound message ('message'). Given `ideal_customer`, does the person or company behind `texte` fit the ideal customer? Judge only from what the text says; a size or sector left unsaid is not a reason to say no."
+      },
+      "criteria": {
+        "true": "The text describes, or comes from, a B2B company of the target size that sells to other businesses, and nothing in it matches an exclusion: an industrial SME exporting machines, a SaaS with 40 people, a founder writing 'on a besoin de plus de rendez-vous', a sales director asking how the service works.",
+        "false": "The text matches an exclusion or points away from the target: a shop or restaurant selling to consumers, a town hall or hospital, a freelancer offering their own services, a growth or outbound agency, a group with thousands of employees, or a message that is a job application or a vendor pitch."
+      }
+    }
+  }
+}

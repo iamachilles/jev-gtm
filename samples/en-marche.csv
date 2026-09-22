@@ -1,0 +1,11 @@
+id,entreprise,secteur,effectif,description,signaux_recents
+1,Nuvola,Logiciel B2B,35,Plateforme SaaS d'aide à l'export pour les PME industrielles.,2026-09-10 : offre d'emploi SDR (premier recrutement sales) ; 2026-08-28 : post du CEO : on structure enfin notre prospection sortante
+2,Bellune Textile,Industrie textile,140,"Tissage et ennoblissement pour la mode et l'ameublement, fondée en 1921.",2026-09-02 : remise du label Entreprise du Patrimoine Vivant ; 2026-07-15 : offre d'emploi Comptable général
+3,Vertigo Robotics,Robotique industrielle,45,Robots de tri pour la logistique.,"2026-09-05 : levée de 4 M€ pour accélérer le déploiement commercial en Europe, recrutement d'une équipe sales annoncé ; 2026-08-20 : ouverture d'un bureau à Munich"
+4,Groupe Aléa,Courtage en assurance,320,Courtier en assurance pour les entreprises depuis 1987.,2026-01-12 : arrivée d'un nouveau directeur commercial ; 2025-11-03 : refonte du site internet
+5,Lumen Énergie,Énergie renouvelable,80,Producteur d'énergie solaire pour les industriels.,2026-09-15 : changement de CRM annoncé (passage sur HubSpot) avec un séquenceur branché derrière ; 2026-09-01 : offre d'emploi Business Developer
+6,Corvus Avocats,Cabinet d'avocats,15,Cabinet d'avocats d'affaires à Bordeaux.,2026-08-30 : post d'un associé : nous cherchons un prestataire pour prospecter les directions juridiques des ETI
+7,Atelier Maud,Joaillerie,4,Atelier de joaillerie sur mesure à Annecy.,2026-09-12 : nouvelle collection présentée en boutique ; 2026-06-20 : participation à un salon de créateurs
+8,Martin Technologies,ESN,60,ESN spécialisée dans le cloud.,2026-09-08 : offre d'emploi Ingénieur DevOps senior ; 2026-08-25 : offre d'emploi Développeur Kubernetes
+9,Maison Roussel,Agroalimentaire,90,"Biscuiterie artisanale, vente en grande distribution et aux professionnels.",2026-09-14 : offre d'emploi Responsable marketing digital ; 2026-08-10 : lancement d'une boutique en ligne
+10,Groupe Delorme Logistique,Transport et logistique,210,Transport de fret et logistique pour l'industrie.,"2026-09-18 : plan social annoncé, gel des recrutements ; 2026-07-02 : perte d'un client majeur"

@@ -1,0 +1,28 @@
+{
+  "slug": "prochain-geste",
+  "titre": "Choisir le prochain geste d'un agent parmi vos playbooks",
+  "description": "Un agent qui tient un compte doit choisir son prochain geste sans improviser. Jev reçoit la situation du compte (étape, dernier échange, ce qui vient de se passer) et rend le playbook à jouer parmi ceux que vous avez écrits, avec la probabilité de chaque option. Les sept playbooks ci-dessous sont un exemple pour une séquence de prospection B2B : remplacez-les par les vôtres, en gardant toujours l'option de sortie vers un humain.",
+  "categorie": "prioriser",
+  "colonnes": [
+    "compte",
+    "etape",
+    "situation"
+  ],
+  "seuil_confiance": 0.8,
+  "max_chars_par_colonne": 4000,
+  "questions": {
+    "playbook": {
+      "type": "choice",
+      "instructions": "An outbound agent works this account. `etape` is the current stage (nouveau, contacte, engage, rdv_propose, en_pause), `situation` describes what happened last, with dates. Today is 2026-09-22. Pick the single playbook to run next. When the situation contains an objection, a complaint, a negotiation or anything the listed playbooks do not cover, choose passer_a_un_humain.",
+      "criteria": {
+        "invitation_linkedin": "No relationship yet: the person is not connected on LinkedIn, no email is known, and nothing has been sent.",
+        "email_premier_contact": "A verified email exists and no message has been sent yet, or a fresh signal (job post, funding, new role) gives a reason to open the conversation now.",
+        "relance_douce": "One to three messages sent, no reply at all, the last one older than 5 days.",
+        "envoyer_ressource": "The person reacted lightly (liked or commented a post, opened the email several times, asked a general question) without asking for a call or a price.",
+        "proposer_creneau": "The person showed interest: asked for a call, a demo, a price or a proposal, or a meeting was cancelled and needs a new slot.",
+        "mettre_en_pause": "The person said not now and gave a date or a season, is on leave, or four or more touches got no reaction at all.",
+        "passer_a_un_humain": "An objection, a complaint, an unsubscribe request, a negotiation on price or scope, a legal or technical question, a reply from someone else than the target, or a situation that matches none of the playbooks above."
+      }
+    }
+  }
+}

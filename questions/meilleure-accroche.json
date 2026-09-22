@@ -1,0 +1,40 @@
+{
+  "slug": "meilleure-accroche",
+  "titre": "Choisir la meilleure accroche parmi plusieurs variantes",
+  "description": "Un générateur (ou un humain) produit trois accroches pour un prospect ; il faut en retenir une avant l'envoi, sans relire chaque triplet. Jev reçoit la fiche du prospect et les trois variantes, applique des règles de sélection et rend la lettre de la variante retenue, ou `aucune` quand les trois sont à jeter. Les règles ci-dessous sont celles d'une prospection sobre auprès de dirigeants de PME : à adapter à votre ton dans `rules`.",
+  "categorie": "message",
+  "colonnes": [
+    {
+      "cle": "prospect",
+      "colonnes": [
+        "prospect_headline",
+        "prospect_entreprise",
+        "prospect_contexte"
+      ]
+    },
+    {
+      "cle": "variantes",
+      "colonnes": [
+        "accroche_a",
+        "accroche_b",
+        "accroche_c"
+      ]
+    }
+  ],
+  "seuil_confiance": 0.6,
+  "questions": {
+    "retenue": {
+      "type": "choice",
+      "instructions": {
+        "rules": "A good opening line refers to one specific, verifiable fact about this prospect taken from `prospect_contexte` or `prospect_entreprise` (a hire, a launch, a post, a figure), states it in one sentence without flattery, and connects it to a concrete problem of their role. Reject a line that: uses generic praise ('parcours impressionnant', 'belle boîte'), says we found or spotted them ('je vous ai trouvé', 'j'ai repéré votre profil'), mentions a fact that contradicts the prospect file, opens with our company or our offer, or exceeds two sentences.",
+        "question": "Given `rules` and the `prospect` file, which of the three opening lines in `variantes` should we send?"
+      },
+      "criteria": {
+        "a": "`accroche_a` is the best line: specific to the prospect, factually consistent with the file, no flattery, no 'found you' opening, at most two sentences, and better than b and c on these points.",
+        "b": "`accroche_b` is the best line by the same rules.",
+        "c": "`accroche_c` is the best line by the same rules.",
+        "aucune": "None is acceptable: all three are generic, flattering, contradict the prospect file, open with our offer, or break the length rule."
+      }
+    }
+  }
+}

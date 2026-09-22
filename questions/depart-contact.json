@@ -1,0 +1,21 @@
+{
+  "slug": "depart-contact",
+  "titre": "Détecter le départ d'un contact dans sa réponse",
+  "description": "Une partie des réponses à une campagne (souvent automatiques) annonce que la personne a quitté l'entreprise : le CRM doit alors marquer le contact comme parti, arrêter la séquence et créer un nouveau contact si un successeur est nommé. Jev lit la réponse et dit si le contact a quitté l'entreprise. Une absence temporaire, un congé ou un changement de poste interne ne comptent pas.",
+  "categorie": "reponses",
+  "colonnes": [
+    "reponse"
+  ],
+  "seuil_confiance": 0.7,
+  "max_chars_par_colonne": 2000,
+  "questions": {
+    "a_quitte": {
+      "type": "noul",
+      "instructions": "`reponse` is a reply (human or automatic) to a prospecting email or LinkedIn message. Does it say that the person we wrote to has left the company for good, or is about to? Look for 'a quitté', 'ne fait plus partie', 'ne travaille plus chez', 'n'est plus en poste', 'nouvelle aventure', 'je quitte mes fonctions', a colleague or the company answering that the person is gone, or a bounce that explicitly says the mailbox was closed because the employee left.",
+      "criteria": {
+        "true": "The person has left the company or announces their departure: the message says so, or a colleague, assistant or automatic notice says the person is no longer with the company, whether or not a successor is named.",
+        "false": "The person stays at the company: out of office, vacation, parental leave, sick leave, a change of role or department inside the same company, a transfer to a colleague without saying the person left, a plain reply on the offer, or a technical bounce with no explanation."
+      }
+    }
+  }
+}

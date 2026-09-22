@@ -1,0 +1,25 @@
+{
+  "slug": "bon-persona",
+  "titre": "Dire si une personne correspond au persona visé",
+  "description": "Avant de mettre un contact en séquence ou de le confier à un agent, Jev lit son titre LinkedIn, sa présentation et le descriptif de son entreprise, puis dit si la personne entre dans le persona visé. Le persona ci-dessous est un exemple (un cabinet qui vend de la prospection externalisée aux PME B2B cherche les dirigeants et directeurs commerciaux de PME françaises de 10 à 250 salariés) : à réécrire pour votre offre dans `persona`. Les oui sûrs partent en séquence, les lignes sous le seuil vont à un humain.",
+  "categorie": "cibler",
+  "colonnes": [
+    "linkedin_headline",
+    "about",
+    "entreprise_description"
+  ],
+  "seuil_confiance": 0.6,
+  "questions": {
+    "est_persona": {
+      "type": "noul",
+      "instructions": {
+        "persona": "Decision maker for commercial development in a French B2B SME with 10 to 250 employees: founder, CEO, managing director, sales director, head of sales, or head of business development. The company sells to other businesses (software, industry, business services, consulting, law). Excluded: freelancers and solo consultants, agencies and coaches who sell services to executives, companies selling mainly to consumers, public bodies and associations, groups above 250 employees, students and job seekers.",
+        "question": "Given `persona`, does this person match it? Use `linkedin_headline` for the role, `about` for what they actually do, and `entreprise_description` for what the company sells and its size. When the headline and the about text disagree, trust the about text."
+      },
+      "criteria": {
+        "true": "Role, company type and company size all fit the persona, or the only missing piece is a size that is simply not stated.",
+        "false": "At least one element contradicts the persona: employee without commercial ownership, freelancer or consultant selling their own services, company selling mainly to consumers, public sector, association, group far above the size limit, student or job seeker."
+      }
+    }
+  }
+}

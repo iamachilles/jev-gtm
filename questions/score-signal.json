@@ -2,8 +2,12 @@
   "slug": "score-signal",
   "titre": "Noter un signal d'intention de 0 à 3",
   "description": "Une offre d'emploi, un post ou une annonce de levée passe devant Jev avec la grille du signal recherché. Jev rend une note de 0 à 3 et sa confiance ; seuls les 3 partent en priorité, les 0 sont écartés sans lecture. La grille est à réécrire pour votre propre offre : celle-ci cherche des PME qui structurent leur prospection.",
-  "etape_gtm": "signaux",
-  "colonnes": ["type_signal", "entreprise", "texte"],
+  "categorie": "signaux",
+  "colonnes": [
+    "type_signal",
+    "entreprise",
+    "texte"
+  ],
   "seuil_confiance": 0.7,
   "max_chars_par_colonne": 4000,
   "questions": {

@@ -1,0 +1,25 @@
+{
+  "slug": "performance-post",
+  "titre": "Prédire la performance d'un post avant publication",
+  "description": "Avant de publier, Jev note le brouillon de 1 à 5 sur des critères observables (accroche, idée unique, détail concret, structure, fin), les mêmes que ceux d'une relecture humaine. La note sert à choisir entre deux versions ou à renvoyer un brouillon en réécriture. La grille est un exemple ; pour la calibrer, passez vos cinquante derniers posts avec leurs impressions et regardez si la note suit.",
+  "categorie": "marketing",
+  "colonnes": [
+    "brouillon"
+  ],
+  "seuil_confiance": 0.6,
+  "max_chars_par_colonne": 4000,
+  "questions": {
+    "note": {
+      "type": "score",
+      "_base": 1,
+      "instructions": "`brouillon` is a LinkedIn post draft written by a B2B founder or operator for an audience of business owners and executives. Rate its likely performance from 1 to 5 using only what is visible in the text: the first two lines (the hook), whether it carries one idea, the presence of concrete details (figures, names, dates, a scene), the structure (short paragraphs, line breaks) and the ending.",
+      "criteria": [
+        "1, weak: opens with an announcement or a platitude ('Fier d'annoncer', 'Aujourd'hui je voulais partager'), generic advice with no detail, a wall of text or a pile of hashtags, or a corporate message with no person behind it.",
+        "2, below average: a real subject but a flat first line that could top any post, lessons stated in the abstract with no figure or scene, several ideas mixed, or a long text without structure.",
+        "3, average: the first line says what the post is about, one idea, at least one concrete detail (a figure, a name, a date), readable paragraphs, but an ending that trails off or repeats the point.",
+        "4, good: a first line that creates a gap (a result, a contradiction, an unexpected figure), a story or a precise example with figures, one idea carried to the end, short paragraphs, and an ending that asks a question or hands a takeaway.",
+        "5, excellent: everything in 4 plus a counterintuitive angle in the first two lines, a specific outcome with figures and a timeframe, a spoken voice with sentences of varied length, and a clear invitation to comment or a resource offered."
+      ]
+    }
+  }
+}
